@@ -26,5 +26,8 @@ with open(input_file,'r',newline='') as filereader:
 			filewriter.write(','.join(map(str, row_list))+'\n')
 ```
 
-对于以上代码中的 `sys.argv[]`，可参考 [覆手为云的介绍](https://www.cnblogs.com/aland-1415/p/6613449.html)，
+对于以上代码中的 `sys.argv[]`，可参考 [覆手为云的介绍](https://www.cnblogs.com/aland-1415/p/6613449.html)，弄明白什么是 argv[] 后，再参考书中 ${P}_{53}-{P}_{54}$ 的操作方法，具体实现
 
+
+
+![testgif](/Users/jason/Desktop/testgif.gif)
