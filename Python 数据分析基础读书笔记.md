@@ -9,11 +9,22 @@
 ```python
 import sys
 
-input_file = sys.argv[1]
-output_file = sys.argv[2]
+input_file = sys.argv[1] #获取输入的文件
+output_file = sys.argv[2] #获取输出的文件
 
-with open()
+with open(input_file,'r',newline='') as filereader:
+	with open(output_file,'w',newline='') as filewriter:
+		header = filereader.readline()
+		header = header.strip()
+		header_list = header.split(',')
+		print(header_list)
+		filewriter.write(','.join(map(str, header_list))+'\n')
+		for row in filereader:
+			row = row.strip()
+			row_list = row.split(',')
+			print(row_list)
+			filewriter.write(','.join(map(str, row_list))+'\n')
 ```
 
-对于以上代码中的 `sys.argv[]`，可参考[覆手为云的介绍](https://www.cnblogs.com/aland-1415/p/6613449.html)
+对于以上代码中的 `sys.argv[]`，可参考 [覆手为云的介绍](https://www.cnblogs.com/aland-1415/p/6613449.html)，
 
