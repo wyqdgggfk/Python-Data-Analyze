@@ -30,4 +30,3 @@ with open(input_file,'r',newline='') as filereader:
 
 
 
-![testgif](/Users/jason/Desktop/testgif.gif)
