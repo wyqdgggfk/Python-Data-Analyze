@@ -1,8 +1,8 @@
 import csv
 import sys
 
-input_file = sys.argv[1]
-output_file = sys.argv[2]
+input_file = sys.argv[1] #要读取的 csv 文件名为 YouTubeReadFile.csv
+output_file = sys.argv[2] #要写入的 csv 文件名为 YouTubeWriteFile.csv
 
 with open(input_file,'r',newline='') as csv_in_file:
 	with open(output_file,'w',newline='') as csv_out_file:
