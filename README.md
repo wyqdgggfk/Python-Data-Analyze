@@ -1,6 +1,4 @@
 # Python 数据分析基础笔记
 
-此笔记目前为内部可见，将在完成本 pdf 的学习后公布于公众号，简书及少数派。
-
-
+详细的笔记内容请查看：[Python 数据分析基础笔记](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/Python%20数据分析基础读书笔记.md)
 
