@@ -69,7 +69,3 @@ data_frame.to_csv(output_file,index=False)
 
 测试一个图片
 
-
-
-![image-20200120134507627](../../../Library/Application Support/typora-user-images/image-20200120134507627.png)
-
