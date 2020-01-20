@@ -141,7 +141,7 @@ with open(input_file,'r',newline='') as csv_in_file:
 				filewriter.writerow(row_list)
 ```
 
-有了上述的代码，我们可以稍微修改一下，在 Kaggle 官网上找到 YouTube 的一些[视频观看数据](https://www.kaggle.com/datasnaek/youtube-new)来进行简单的筛选，具体代码如下：
+有了上述的代码，我们可以稍微修改一下，在 Kaggle 官网上找到 YouTube 的一些[视频观看数据](https://www.kaggle.com/datasnaek/youtube-new)来进行简单的筛选，我已经将要读取的名为 [YouTubeReadFile.csv](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第2章所需资料/YouTubeReadFile.csv) 的文件放在仓库中，具体代码如下：
 
 ```python
 import csv
