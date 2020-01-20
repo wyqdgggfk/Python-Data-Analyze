@@ -65,5 +65,7 @@ data_frame.to_csv(output_file,index=False)
 
 再来看看上面的代码在 CodeRunner 中的运行结果：
 
-![image](
+![image](https://github.com/wyqdgggfk/Python-/blob/master/第2章所需资料/pandas_parsing_and_write.gif)
+
+
 
