@@ -4,6 +4,8 @@
 
 # 第 2 章 CSV 文件
 
+## 2.1.1 读写 CSV 文件(第一部分)
+
 ### 基础 Python，不使用 CSV 模块
 
 如果不使用 python 的 csv 模块，那么如何读写 csv 文件？可参考以下代码：
@@ -66,6 +68,42 @@ data_frame.to_csv(output_file,index=False)
 再来看看上面的代码在 CodeRunner 中的运行结果：
 
 ![image](https://github.com/wyqdgggfk/Python-/blob/master/第2章所需资料/pandas_parsing_and_write.gif)
+
+## 2.1.2  基本字符串分析是如何失败的
+
+对于 1csv_read_with_simple_parsing_and_write.py 中的代码，要考虑一种情况，就是如果数据中有逗号怎么办，代码是以逗号分隔每行数据中的每个数据，如果数据本身有逗号，就会形成干扰。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
