@@ -10,7 +10,7 @@ with open(input_file,'r',newline='') as csv_in_file:
 		filewriter = csv.writer(csv_out_file)
 		header = next(filereader) #使用 csv 模块的 next 函数读出输入文件的第一行，赋名 header 列表
 		filewriter.writerow(header)
-		for row_list in filereader:
+		for row_list in filereader: #按行读取数据
 			supplier  = str(row_list[0]).strip()
 			cost = str(row_list[3]).strip('$').replace(',','')
 			if supplier == 'Supplier Z' or float(cost) > 600.0:

@@ -134,10 +134,32 @@ with open(input_file,'r',newline='') as csv_in_file:
 		filewriter = csv.writer(csv_out_file)
 		header = next(filereader) #使用 csv 模块的 next 函数读出输入文件的第一行，赋名 header 列表
 		filewriter.writerow(header)
-		for row_list in filereader:
+		for row_list in filereader: #按行读取数据
 			supplier  = str(row_list[0]).strip()
 			cost = str(row_list[3]).strip('$').replace(',','')
 			if supplier == 'Supplier Z' or float(cost) > 600.0:
+				filewriter.writerow(row_list)
+```
+
+有了上述的代码，我们可以稍微修改一下，在 Kaggle 官网上找到 YouTube 的一些[视频观看数据](https://www.kaggle.com/datasnaek/youtube-new)来进行简单的筛选，具体代码如下：
+
+```python
+import csv
+import sys
+
+input_file = sys.argv[1]
+output_file = sys.argv[2]
+
+with open(input_file,'r',newline='') as csv_in_file:
+	with open(output_file,'w',newline='') as csv_out_file:
+		filereader = csv.reader(csv_in_file)
+		filewriter = csv.writer(csv_out_file)
+		header = next(filereader)
+		filewriter.writerow(header)
+		for row_list in filereader:
+			views = int(str(row_list[7]).strip()) # 观看人数
+			likes = int(str(row_list[8]).strip()) # 点赞人数
+			if views >= 1147000 and likes >= 39000: # 筛选观看人数和点赞人数均大于平均数的数据，共 5994 个
 				filewriter.writerow(row_list)
 ```
 
