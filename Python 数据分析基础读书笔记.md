@@ -67,5 +67,5 @@ data_frame.to_csv(output_file,index=False)
 
 ![image](https://github.com/wyqdgggfk/Python-/blob/master/第2章所需资料/pandas_parsing_and_write.gif)
 
-测试一个图片
+
 
