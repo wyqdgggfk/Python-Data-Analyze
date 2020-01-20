@@ -99,7 +99,9 @@ with open(input_file,'r',newline='') as csv_in_file:
 
 运行结果如下：
 
-![image](
+![image](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第2章所需资料/2csv_reader_parsing_and_write.png)
+
+
 
 
 
