@@ -4,9 +4,11 @@
 
 # 第 2 章 CSV 文件
 
-## 2.1.1 读写 CSV 文件(第 1 部分)
+## 2.1  基础 Python 与 pandas
 
-### 基础 Python，不使用 CSV 模块
+### 2.1.1 读写 CSV 文件(第 1 部分)
+
+#### 基础 Python，不使用 CSV 模块
 
 如果不使用 python 的 csv 模块，那么如何读写 csv 文件？可参考以下代码：
 
@@ -69,13 +71,13 @@ data_frame.to_csv(output_file,index=False)
 
 ![image](https://github.com/wyqdgggfk/Python-/blob/master/第2章所需资料/pandas_parsing_and_write.gif)
 
-## 2.1.2  基本字符串分析是如何失败的
+### 2.1.2  基本字符串分析是如何失败的
 
 对于 1csv_read_with_simple_parsing_and_write.py 中的代码，要考虑一种情况，就是如果数据中有逗号怎么办，代码是以逗号分隔每行数据中的每个数据，如果数据本身有逗号，就会形成干扰。
 
-## 2.1.3 读写 CSV 文件(第 2 部分)
+### 2.1.3 读写 CSV 文件(第 2 部分)
 
-### 基础 Python，使用 CSV 模块
+#### 基础 Python，使用 CSV 模块
 
 使用 CSV 模块的一个好处就是：不需要仅仅为了正确处理数据而花费时间来设计正则表达式和条件逻辑。
 
@@ -100,6 +102,18 @@ with open(input_file,'r',newline='') as csv_in_file:
 运行结果如下：
 
 ![image](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第2章所需资料/2csv_reader_parsing_and_write.png)
+
+## 2.2 筛选特定的行
+
+**注意以下伪代码的结构**：
+
+```python
+for row in filereader:
+  ***if value in row meets some business rule or set of rules:***
+    		do something
+	else:
+  			do something else      
+```
 
 
 
