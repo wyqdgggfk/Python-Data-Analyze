@@ -115,6 +115,10 @@ for row in filereader:
   		do something else      
 ```
 
+### 2.2.1 行中的值满足某个条件
+
+#### 基础 Python
+
 
 
 
