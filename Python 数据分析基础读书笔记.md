@@ -170,10 +170,21 @@ loc 函数：pandas 提供的可以同时选择特定行与列的函数。在逗
 如果我想在 supplier_data.csv 中筛选供应商名称包含字母'Z'，或者 cost 大于 600.0 的数据应该如何做呢？且看具体示例代码 pandas_value_meets_condition.py：
 
 ```python
+import pandas as pd
+import sys
 
+input_file = sys.argv[1]
+output_file = sys.argv[2]
+
+data_frame = pd.read_csv(input_file) #读取输入的表格
+data_frame['Cost'] = data_frame['Cost'].str.strip('$') # 试试看，如果某个 Cost 的值有逗号会怎样，比如 6,015.00
+data_frame['Cost'] = data_frame['Cost'].str.replace(',','').astype(float)
+
+data_frame_value_meets_condition = data_frame.loc[(data_frame['Supplier Name'].str.contains('Z'))|(data_frame['Cost']>600.0),:]
+data_frame_value_meets_condition.to_csv(output_file,index=False)
 ```
 
-
+原书的代码与本代码有些不一样，原书没有考虑到 Cost 数值中有逗号的情形，这在转换为 float 时会报错。
 
 
 
