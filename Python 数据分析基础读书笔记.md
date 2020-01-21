@@ -276,7 +276,9 @@ with open(input_file,'r',newline='') as csv_in_file:
 				filewriter.writerow(row_list)
 ```
 
-如何运行？此处只是补充说明，实际上在之前的笔记中有过讲解，只要在终端用 cd 命令先导航到此 .py 文件的路径下，比如在我的 Mac 上就是 `cd /Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料`，然后运行此命令 `python3 5csv_reader_value_matches_pattern.py supplier_data.csv 5csv_reader_value_matches_pattern.csv`，就可以将 supplier_data.csv 中符合要求的数据写入到 5csv_reader_value_matches_pattern.csv 中。
+如何运行？此处只是补充说明，实际上在之前的笔记中有过讲解，只要在终端用 cd 命令先导航到此 .py 文件的路径下，比如在我的 Mac 上就是
+
+ `cd /Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料`，然后运行此命令 `python3 5csv_reader_value_matches_pattern.py supplier_data.csv 5csv_reader_value_matches_pattern.csv`，就可以将 supplier_data.csv 中符合要求的数据写入到 5csv_reader_value_matches_pattern.csv 中。
 
 在以上代码中，我们要搜索的是以 “001-”开头的的字符串(注意 001 后面的那一根短横线，也是要匹配的对象)，实心句号代表匹配除了换行符的任意字符，而星号则是匹配多个前面的字符，那么 “*” 连起来的意思就是“匹配除换行符以外的多个字符”，re.I 的意思是进行大小写敏感的匹配，当然在这段代码中并不重要
 
