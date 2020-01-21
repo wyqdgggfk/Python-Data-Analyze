@@ -2,8 +2,8 @@ import csv
 import re
 import sys
 
-input_file = sys.argv[1]
-output_file = sys.argv[2]
+input_file = sys.argv[1] #此处为 supplier_data.csv
+output_file = sys.argv[2]] #此处为 5csv_reader_value_matches_pattern.csv
 
 pattern = re.compile(r'(?P<my_pattern_group>^001-.*)',re.I)
 with open(input_file,'r',newline='') as csv_in_file:
