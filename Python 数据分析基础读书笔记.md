@@ -256,10 +256,27 @@ data_frame_value_in_set.to_csv(output_file,index=False)
 同样的例子还有很多，可以通过给出的数据进行筛选，下面看一段书中用 csv 和 re 两个库实现的代码：
 
 ```python
+import csv
+import re
+import sys
 
+input_file = sys.argv[1]
+output_file = sys.argv[2]
+
+pattern = re.compile(r'(?P<my_pattern_group>^001-.*)',re.I)
+with open(input_file,'r',newline='') as csv_in_file:
+	with open(output_file,'w',newline='') as csv_out_file:
+		filereader = csv.reader(csv_in_file)
+		filewriter = csv.writer(csv_out_file)
+		header = next(filereader)
+		filewriter.writerow(header)
+		for row_list in filereader:
+			invoice_number = row_list[1]
+			if pattern.search(invoice_number):
+				filewriter.writerow(row_list)
 ```
 
-![image](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第2章所需资料/2csv_reader_parsing_and_write.png)
+
 
 
 
