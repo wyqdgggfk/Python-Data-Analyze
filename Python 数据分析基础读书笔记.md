@@ -163,7 +163,15 @@ with open(input_file,'r',newline='') as csv_in_file:
 				filewriter.writerow(row_list)
 ```
 
+#### 利用 pandas 选择符合特定条件值的行
 
+loc 函数：pandas 提供的可以同时选择特定行与列的函数。在逗号前面设定行筛选条件，在逗号后面设定列筛选条件。
+
+如果我想在 supplier_data.csv 中筛选供应商名称包含字母'Z'，或者 cost 大于 600.0 的数据应该如何做呢？且看具体示例代码 pandas_value_meets_condition.py：
+
+```python
+
+```
 
 
 
