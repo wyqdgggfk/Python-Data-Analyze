@@ -288,7 +288,7 @@ cd /Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料
 python3 5csv_reader_value_matches_pattern.py supplier_data.csv 5csv_reader_value_matches_pattern.csv
 ```
 
-即可将 supplier_data.csv 中符合要求的数据写入5csv_reader_value_matches_pattern.csv 中。
+即可将 supplier_data.csv 中符合要求的数据写入 5csv_reader_value_matches_pattern.csv 中。
 
 在以上代码中，我们要搜索的是以 “001-”开头的的字符串(注意 001 后面的那一根短横线，也是要匹配的对象)，实心句号代表匹配除了换行符的任意字符，而星号则是匹配多个前面的字符，那么 “*” 连起来的意思就是“匹配除换行符以外的多个字符”，re.I 的意思是进行大小写敏感的匹配，当然在这段代码中并不重要
 
