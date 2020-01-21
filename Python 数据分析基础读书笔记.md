@@ -232,7 +232,20 @@ with open(input_file,'r',newline='') as csv_in_file:
 				filewriter.writerow(row_list)
 ```
 
+以上代码是通过 csv 库实现的效果，如果用 pandas 会更加简单，如下所示：
 
+```python
+import pandas as pd
+import sys
+input_file = sys.argv[1]
+output_file = sys.argv[2]
+data_frame = pd.read_csv(input_file)
+important_dates = ['1/20/14','1/30/14']
+data_frame_value_in_set = data_frame.loc[data_frame['Purchase Date'].isin(important_dates),:] #isin 这个命令很简单实用
+data_frame_value_in_set.to_csv(output_file,index=False)
+```
+
+### 2.2.3 行中的值匹配于某个模式/正则表达式
 
 
 
