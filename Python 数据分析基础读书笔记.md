@@ -204,7 +204,7 @@ data_frame_value_meets_condition = data_frame.loc[(data_frame['views']>=1147000)
 data_frame_value_meets_condition.to_csv(output_file,index=False)
 ```
 
-这里会
+这里会将 YouTubeReadFile.csv 文件中符合条件的值筛选出来，并存储到 YouTube_pandas_value_meets_condition.py 中。
 
 
 
