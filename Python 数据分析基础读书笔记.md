@@ -154,12 +154,12 @@ with open(input_file,'r',newline='') as csv_in_file:
 	with open(output_file,'w',newline='') as csv_out_file:
 		filereader = csv.reader(csv_in_file)
 		filewriter = csv.writer(csv_out_file)
-		header = next(filereader) #使用 csv 模块的 next 函数读出输入文件的第一行，赋名 header 列表
+		header = next(filereader)
 		filewriter.writerow(header)
-		for row_list in filereader: #按行读取数据
-			supplier  = str(row_list[0]).strip()
-			cost = str(row_list[3]).strip('$').replace(',','')
-			if supplier == 'Supplier Z' or float(cost) > 600.0:
+		for row_list in filereader:
+			views = int(str(row_list[7]).strip()) # 观看人数
+			likes = int(str(row_list[8]).strip()) # 点赞人数
+			if views >= 1147000 and likes >= 39000: # 筛选观看人数和点赞人数均大于平均数的数据，共 5994 个
 				filewriter.writerow(row_list)
 ```
 
@@ -185,6 +185,14 @@ data_frame_value_meets_condition.to_csv(output_file,index=False)
 ```
 
 原书的代码与本代码有些不一样，原书没有考虑到 Cost 数值中有逗号的情形，这在转换为 float 时会报错。
+
+同样参考以上代码，如果我想筛选出 YouTubeFile.csv 中 views 大于 114700，likes 大于 39000 且 comment_count 大于 5043 的电视节目，应该怎样做呢？可以参考下面的这段代码：
+
+```python
+
+```
+
+
 
 
 
