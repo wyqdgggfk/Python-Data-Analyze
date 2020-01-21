@@ -259,6 +259,8 @@ data_frame_value_in_set.to_csv(output_file,index=False)
 
 ```
 
+![image](https://github.com/wyqdgggfk/Python-Data-Analyze/raw/master/第2章所需资料/2csv_reader_parsing_and_write.png)
+
 
 
 
