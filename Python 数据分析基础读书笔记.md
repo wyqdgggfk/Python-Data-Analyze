@@ -208,7 +208,31 @@ data_frame_value_meets_condition.to_csv(output_file,index=False)
 
 ### 2.2.2 行中的值属于某个集合
 
-如果行中的某个值
+如果行中的某个值属于某个范围，也可以筛选出来，比如特定的某几个日期，再比如特定的某几种属性，可参考以下代码：
+
+```python
+import csv
+import sys
+
+input_file = sys.argv[1] #此处获取的是 supplier_data.csv
+output_file = sys.argv[2] #此处输出的是 4output.csv
+
+important_dates = ['1/20/14','1/30/14']
+
+with open(input_file,'r',newline='') as csv_in_file:
+	with open(output_file,'w',newline='') as csv_out_file:
+		
+		filereader = csv.reader(csv_in_file)
+		filewriter = csv.writer(csv_out_file)
+		header = next(filereader)
+		filewriter.writerow(header)
+		for row_list in filereader:
+			a_date = row_list[4]
+			if a_date in important_dates:
+				filewriter.writerow(row_list)
+```
+
+
 
 
 
