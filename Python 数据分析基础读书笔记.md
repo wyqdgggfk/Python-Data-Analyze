@@ -206,7 +206,7 @@ data_frame_value_meets_condition.to_csv(output_file,index=False)
 
 这里会将 YouTubeReadFile.csv 文件中符合条件的值筛选出来，并存储到 YouTube_pandas_value_meets_condition.py 中。
 
-
+### 2.2.2 行中的值属于某个集合
 
 
 
