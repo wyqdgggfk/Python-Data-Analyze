@@ -259,8 +259,6 @@ data_frame_value_in_set.to_csv(output_file,index=False)
 
 ```
 
-![image](Screen Shot 2019-12-08 at 19.55.46.png)
-
 
 
 
