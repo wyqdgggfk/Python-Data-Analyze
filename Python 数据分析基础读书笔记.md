@@ -208,7 +208,7 @@ data_frame_value_meets_condition.to_csv(output_file,index=False)
 
 ### 2.2.2 行中的值属于某个集合
 
-
+如果行中的某个值
 
 
 
