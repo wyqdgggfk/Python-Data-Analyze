@@ -16,3 +16,4 @@ with open(input_file,'r',newline='') as csv_in_file:
 			invoice_number = row_list[1]
 			if pattern.search(invoice_number):
 				filewriter.writerow(row_list)
+
