@@ -292,7 +292,21 @@ python3 5csv_reader_value_matches_pattern.py supplier_data.csv 5csv_reader_value
 
 在以上代码中，我们要搜索的是以 “001-”开头的的字符串(注意 001 后面的那一根短横线，也是要匹配的对象)，实心句号代表匹配除了换行符的任意字符，而星号则是匹配多个前面的字符，那么 “*” 连起来的意思就是“匹配除换行符以外的多个字符”，re.I 的意思是进行大小写敏感的匹配，当然在这段代码中并不重要。
 
+同样的功能，如果用 pandas 来实现，代码量会更少，可参考如下：
 
+```python
+import pandas as pd
+import sys
+
+input_file = sys.argv[1] #此处的文件还是 supplier_data.csv
+output_file = sys.argv[2] #此处的文件是 pandas_value_matches_pattern_5output.csv
+
+data_frame = pd.read_csv(input_file)
+data_frame_value_matches_pattern = data_frame.loc[data_frame['Invoice Number'].str.startswith("001-"),:]
+data_frame_value_matches_pattern.to_csv(output_file,index=False)
+```
+
+需要注意的是，我在用 CodeRunner 写 pandas 时，总是不能自动补全，导致一些细节错误无法正常运行代码，不过，这也正好可以练习一下写代码的基本功，毕竟一些常用的功能模块是需要记住的，不能都靠代码补全功能。
 
 
 

@@ -1,0 +1,9 @@
+import pandas as pd
+import sys
+
+input_file = sys.argv[1] #此处的文件还是 supplier_data.csv
+output_file = sys.argv[2] #此处的文件是 pandas_value_matches_pattern_5output.csv
+
+data_frame = pd.read_csv(input_file)
+data_frame_value_matches_pattern = data_frame.loc[data_frame['Invoice Number'].str.startswith("001-"),:]
+data_frame_value_matches_pattern.to_csv(output_file,index=False)
