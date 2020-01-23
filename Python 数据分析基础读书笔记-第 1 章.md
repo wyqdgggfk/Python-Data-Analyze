@@ -374,6 +374,12 @@ with open(input_file,'r',newline='') as csv_in_file:
 			time.sleep(0.001)
 ```
 
+书中还给出了利用 pandas 挑选指定列的方法，比使用 csv 会更加简单，如下所示：
+
+```python
+import 
+```
+
 
 
 
