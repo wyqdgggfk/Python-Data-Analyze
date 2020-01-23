@@ -316,12 +316,28 @@ data_frame_value_matches_pattern.to_csv(output_file,index=False)
 对于 supplier_data.csv 文件中，如果我们想只保留供应商名称和成本这两列，我们就可以使用索引值来选取这两列，书中将以下代码保存为 6csv_reader_column_by_index.py：
 
 ```python
-
+import csv
+import sys
+input_file = sys.argv[1] #此处为 supplier_data.csv
+output_file = sys.argv[2] #此处为 6output.csv
+my_columns = [0,3]
+with open(input_file,'r',newline='') as csv_in_file:
+	with open(output_file,'w',newline='') as csv_out_file:
+		filereader = csv.reader(csv_in_file)
+		filewriter = csv.writer(csv_out_file)
+		for row_list in filereader:
+			row_list_output = []
+			for index_value in my_columns:
+				row_list_output.append(row_list[index_value])
+			filewriter.writerow(row_list_output)
 ```
 
 完成以上代码后，在资料文件夹中创建一个空白的 6output.csv 文件，然后终端运行如下命令：
 
+1. 先导航到 .py 文件所在路径下 `cd /Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料`
+2. 运行此命令：`python3 6csv_reader_column_by_index.py supplier_data.csv 6output.csv`
 
+终端不会有任何输出，但是此时打开 6output.csv 文件，就能看到供应商名称和对应的价格了。
 
 
 

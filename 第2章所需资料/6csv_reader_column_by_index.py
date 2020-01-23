@@ -1,6 +1,6 @@
 import csv
 import sys
-input_file = sys.argv[1] #此处为 6csv_reader_column_by_index.py
+input_file = sys.argv[1] #此处为 supplier_data.csv
 output_file = sys.argv[2] #此处为 6output.csv
 my_columns = [0,3]
 with open(input_file,'r',newline='') as csv_in_file:
@@ -10,5 +10,5 @@ with open(input_file,'r',newline='') as csv_in_file:
 		for row_list in filereader:
 			row_list_output = []
 			for index_value in my_columns:
-				row_list_output.append[row_list[index_value]]
+				row_list_output.append(row_list[index_value])
 			filewriter.writerow(row_list_output)
