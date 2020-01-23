@@ -1,3 +1,5 @@
+
+
 # 第 2 章 CSV 文件
 
 ## 2.1  基础 Python 与 pandas
@@ -339,7 +341,38 @@ with open(input_file,'r',newline='') as csv_in_file:
 
 终端不会有任何输出，但是此时打开 6output.csv 文件，就能看到供应商名称和对应的价格了。
 
+同样的功能，我们来稍微做个小练习，找到一个名为 DEvideos.csv 的文件，此文件是从 [Kaggle](https://www.kaggle.com/datasnaek/youtube-new) 网站下载的 YouTube 观看数据之一，打开检查一下这个 csv 文件，第一排有 video_id,trending_date,title,channel_title,category_id 等等信息，现在的任务是，要抓取比较多的数据，具体要求如下：
 
+1. 抓取的数据应该包括除了 description 以外的所有数据；
+2. 对于 publish_time，仅保留日期，不用保留具体时间；
+3. 每抓取一条信息，都在终端打印下来。
+
+为了处理这个问题，我们依次来看要求，首先是抓取的数据要除开 description，这个比较好办，一共有 16 列的数据，而且 description 刚好在最后，只要一个 range 函数就可以了；其次是 publish_time，仅保留日期，不需要时间，这个稍微麻烦一点点，需要用到正则匹配；最后是打印下来，这个没什么难度了，就是直接打印，只是在实际打印的过程中，我发现如果不打印，那么程度处理得会很快，如果打印，CodeRunner 出现了转彩球的状况，为了演示，我们加入一个简单的延时 time.sleep(0.001)，在实际操作时可以根据自己的情况酌情考虑是否延时，那么请看下面的代码：
+
+```python
+import csv
+import re
+import time
+
+pattern = re.compile('T[\d]+:[\d]+:[\S]+') # 正则表达式，用来筛选 publish_time 中的日期
+
+"""实在不行再写好代码后，跑去终端运行，就直接把路径写下来吧"""
+input_file = '/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/Trending_YouTube_Video_Statistics/DEvideos.csv'
+output_file = '/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/DEvideo_write_column_by_index.csv'
+with open(input_file,'r',newline='') as csv_in_file:
+	with open(output_file,'w',newline='') as csv_out_file:
+		filereader = csv.reader(csv_in_file)
+		filewriter = csv.writer(csv_out_file)
+		for row_list in filereader:
+			row_list_output = []
+			for i in range(15):
+				if i==5:
+					row_list[i] = re.sub(pattern, '', row_list[i]) #将 publish_time 中日期后面的部分用替换的方式删除掉
+				row_list_output.append(row_list[i])
+			filewriter.writerow(row_list_output)
+			print(row_list_output)
+			time.sleep(0.001)
+```
 
 
 
