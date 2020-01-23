@@ -416,9 +416,9 @@ with open(input_file,'r',newline='') as csv_in_file:
 			filewriter.writerow(row_list_output)
 ```
 
-原书的代码有一处错误，倒数第二排的  row_list_output.append(row_list[index_value]) 没有缩进。另外，最后一排代码，filewriter.writerow(row_list_output)，我不清楚是我机器的问题还是书中代码的问题，这一段代码也需要缩进到第二个 for 循环下，而不是第一个 for 循环下，如果不缩进，那么在我的 Mac 上运行时，只读取到了 supplier_data.csv 中最后一排的发票和价格
+原书的代码有一处错误，倒数第二排的  row_list_output.append(row_list[index_value]) 没有缩进。另外，最后一排代码，filewriter.writerow(row_list_output)，我不清楚是我机器的问题还是书中代码的问题，这一段代码也需要缩进到第二个 for 循环下，而不是第一个 for 循环下，如果不缩进，那么在我的 Mac 上运行时，只读取到了 supplier_data.csv 中最后一排的发票和价格。
 
-
+## 2.4 选取连续的行
 
 
 
