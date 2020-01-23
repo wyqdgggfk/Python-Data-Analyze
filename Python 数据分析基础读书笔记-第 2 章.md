@@ -1,5 +1,3 @@
-
-
 # 第 2 章 CSV 文件
 
 ## 2.1  基础 Python 与 pandas
@@ -377,10 +375,48 @@ with open(input_file,'r',newline='') as csv_in_file:
 书中还给出了利用 pandas 挑选指定列的方法，比使用 csv 会更加简单，如下所示：
 
 ```python
-import 
+import pandas as pd
+import sys
+input_file = sys.argv[1]
+output_file = sys.argv[2]
+data_frame = pd.read_csv(input_file)
+data_frame_column_by_index = data_frame.iloc[:,[0,3]]
+data_frame_column_by_index.to_csv(output_file,index=False) 
 ```
 
+很明显，用 pandas 会比用 csv 更加简单，代码量也更少。
 
+### 2.3.2 列标题
+
+除了用索引选取特定列以外，还可以在 csv 文件中使用列标题来选取特定的列，可参考如下代码：
+
+```python
+import csv
+import sys
+
+input_file = sys.argv[1]
+output_file = sys.argv[2]
+
+my_columns = ['Invoice Number','Purchase Date']
+my_columns_index = []
+
+with open(input_file,'r',newline='') as csv_in_file:
+	with open(output_file,'w',newline='') as csv_out_file:
+		filereader = csv.reader(csv_in_file)
+		filewriter = csv.writer(csv_out_file)
+		header = next(filereader,None)
+		for index_value in range(len(header)):
+			if header[index_value] in my_columns:
+				my_columns_index.append(index_value)
+		filewriter.writerow(my_columns)
+		for row_list in filereader:
+			row_list_output =[]
+			for index_value in my_columns_index:
+				row_list_output.append(row_list[index_value])
+			filewriter.writerow(row_list_output)
+```
+
+原书的代码有一处错误，倒数第二排的  row_list_output.append(row_list[index_value]) 没有缩进。另外，最后一排代码，filewriter.writerow(row_list_output)，我不清楚是我机器的问题还是书中代码的问题，这一段代码也需要缩进到第二个 for 循环下，而不是第一个 for 循环下，如果不缩进，那么在我的 Mac 上运行时，只读取到了 supplier_data.csv 中最后一排的发票和价格
 
 
 
