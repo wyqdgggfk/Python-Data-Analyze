@@ -488,8 +488,79 @@ data_frame = data_frame.reindex(data_frame.index.drop(3))
 
 ```python
 input_file = '/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/supplier_data_unnecessary_header_footer.csv' # 请注意此处需要替换为您自己电脑上对应文件的路径
-output_file = '/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/pandas_output_select_contiguous_rows.csv'
+output_file = '/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/pandas_output_select_contiguous_rows.csv' # 请注意此处需要替换为您自己电脑上对应文件的路径
 ```
+
+这一步操作是为了可以直接在 CodeRunner 中运行出结果，省掉了终端命令的过程。
+
+接下来，分别在每一行代码的下方加一句 `print()`，查看当前状态下的各种信息是怎样的：
+
+```python
+# 第一次 print
+import pandas as pd
+import sys
+input_file = '/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/supplier_data_unnecessary_header_footer.csv' # 请注意此处需要替换为您自己电脑上对应文件的路径
+output_file = '/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/pandas_output_select_contiguous_rows.csv' # 请注意此处需要替换为您自己电脑上对应文件的路径
+
+data_frame = pd.read_csv(input_file,header=None)
+print(data_frame)
+```
+
+此时的输出是长这样：
+
+|      | 0                             | 1              | ...  | 4             | 5         |
+| ---- | ----------------------------- | -------------- | ---- | ------------- | --------- |
+| 0    | I don't care this line        | NaN            | ...  | NaN           | NaN       |
+| 1    | I don't care this line        | NaN            | ...  | NaN           | NaN       |
+| 2    | I don't care this line        | NaN            | ...  | NaN           | NaN       |
+| 3    | Supplier Name                 | Invoice Number | ...  | Purchase Date | indextest |
+| 4    | Supplier X                    |                | ...  |               |           |
+| 5    | Supplier X                    |                | ...  |               |           |
+| 6    | Supplier X                    |                | ...  |               |           |
+| 7    | Supplier X                    |                | ...  |               |           |
+| 8    | Supplier Y                    |                | ...  |               |           |
+| 9    | Supplier Y                    |                | ...  |               |           |
+| 10   | Supplier Y                    |                | ...  |               |           |
+| 11   | Supplier Y                    |                | ...  |               |           |
+| 12   | Supplier Z                    |                | ...  |               |           |
+| 13   | Supplier Z                    |                | ...  |               |           |
+| 14   | Supplier Z                    |                | ...  |               |           |
+| 15   | Supplier Z                    |                | ...  |               |           |
+| 16   | I don't care this line either |                | ...  |               |           |
+| 17   | I don't care this line either |                | ...  |               |           |
+| 18   | I don't care this line either |                | ...  |               |           |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
