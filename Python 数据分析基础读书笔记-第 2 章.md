@@ -439,9 +439,19 @@ with open(input_file,'r',newline='') as csv_in_file:
 			row_counter += 1
 ```
 
-以上代码可以在 supplier_data_unnecessary_header_footer.csv 这个文件中跳过行开头的数据，过滤行结尾的数据，只选择我们需要的部分。
+以上代码可以在 [supplier_data_unnecessary_header_footer.csv](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第2章所需资料/supplier_data_unnecessary_header_footer.csv) 这个文件中跳过行开头的数据，过滤行结尾的数据，只选择我们需要的部分。
 
 另外，在实际操作过程中，我将 supplier_data.csv 另存为一个新的 csv 文件，添加三行 “I don't care this line” 到表头，又添加三行“I don't care this line either” 到表尾，并保存成 supplier_data_unnecessary_header_footer.csv 时，运行上述代码遇到一个问题，错误提示是“UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd5 in position 5: invalid continuation byte”，网上查了一下这应该是 utf-8 的解码问题，如果您也遇到了类似问题，不妨试试我的方法：把所有单元格的内容整体复制下来，新建一个 csv 文件粘贴进去，我是这样解决的。
+
+刚刚是用 Python 自带的 csv 库完成了筛选特定行的操作，如果用 Pandas 的话，其实会更加简单，如下所示：
+
+```python
+
+```
+
+
+
+
 
 
 
