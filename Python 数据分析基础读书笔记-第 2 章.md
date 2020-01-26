@@ -473,7 +473,7 @@ Supplier Name | Invoice Number | Part Number | Cost | Purchase Date | indextest|
 
 ---- | ---- | ---- | ---- | ---- | ----|
 
-Supplier X|001-1001|2341|$500.001/20/14|1|
+Supplier X|001-1001|2341|$500.0|01/20/14|1|
 
 
 
