@@ -446,10 +446,26 @@ with open(input_file,'r',newline='') as csv_in_file:
 刚刚是用 Python 自带的 csv 库完成了筛选特定行的操作，如果用 Pandas 的话，其实会更加简单，如下所示：
 
 ```python
+import pandas as pd
+import sys
+input_file = sys.argv[1]
+output_file = sys.argv[2]
 
+data_frame = pd.read_csv(input_file,header=None)
+data_frame = data_frame.drop([0,1,2,16,17,18])
+data_frame.columns = data_frame.iloc[0]
+indexInfo = data_frame.index.drop(3)
+data_frame = data_frame.reindex(data_frame.index.drop(3)) # 为了弄懂这一行代码的含义，我在 csv 文件中加了一列 indextest 索引，从 1 到 12
+data_frame.to_csv(output_file,index=False)
 ```
 
+当然，一开始我是没有弄懂这段代码的，比如这一句
 
+```python
+data_frame = data_frame.reindex(data_frame.index.drop(3))
+```
+
+到底能达到什么目的？在网上查了一下，drop() 函数的功能是把 data_frame 中对应的行或列的值抛掉，那么 `data_frame.index.drop(3)` 是什么鬼
 
 
 
