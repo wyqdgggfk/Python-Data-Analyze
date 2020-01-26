@@ -467,11 +467,13 @@ data_frame = data_frame.reindex(data_frame.index.drop(3))
 
 到底能达到什么目的？在网上查了一下，drop() 函数的功能是把 data_frame 中对应的行或列的值抛掉，那么 `data_frame.index.drop(3)` 是什么鬼，打开已经操作好的 [pandas_output_select_contiguous_rows.csv](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第2章所需资料/pandas_output_select_contiguous_rows.csv) 文件，它是长这个样子的：
 
-Supplier Name | Invoice Number | Part Number | Cost | Purchase Date | indextest
 
----- | ---- | ---- | ---- | ---- | ----
 
-Supplier X|001-1001|2341|$500.001/20/14|1
+Supplier Name | Invoice Number | Part Number | Cost | Purchase Date | indextest|
+
+---- | ---- | ---- | ---- | ---- | ----|
+
+Supplier X|001-1001|2341|$500.001/20/14|1|
 
 
 
