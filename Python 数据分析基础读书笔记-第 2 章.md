@@ -482,6 +482,15 @@ data_frame = data_frame.reindex(data_frame.index.drop(3))
 | Supplier Z    | 920-4803       | 3321        | $60,15.00    | 2/17/14       | 11        |
 | Supplier Z    | 920-4803       | 3321        | $10,06015.00 | 2/24/14       | 12        |
 
+换句话讲，书中的 pandas 代码的确达到了我们想要的结果，即筛选特定行的数据，我们试试看逐个测试这段代码，并将结果打印下来，看看是怎样。
+
+首先把 `input_file` 和 `output_file` 都直接表示为路径，即
+
+```python
+input_file = '/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/supplier_data_unnecessary_header_footer.csv' # 请注意此处需要替换为您自己电脑上对应文件的路径
+output_file = '/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/pandas_output_select_contiguous_rows.csv'
+```
+
 
 
 
