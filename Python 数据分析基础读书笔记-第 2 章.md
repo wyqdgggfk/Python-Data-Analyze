@@ -514,21 +514,21 @@ print(data_frame)
 | 1    | I don't care this line        | NaN            | ...  | NaN           | NaN       |
 | 2    | I don't care this line        | NaN            | ...  | NaN           | NaN       |
 | 3    | Supplier Name                 | Invoice Number | ...  | Purchase Date | indextest |
-| 4    | Supplier X                    |                | ...  |               |           |
-| 5    | Supplier X                    |                | ...  |               |           |
-| 6    | Supplier X                    |                | ...  |               |           |
-| 7    | Supplier X                    |                | ...  |               |           |
-| 8    | Supplier Y                    |                | ...  |               |           |
-| 9    | Supplier Y                    |                | ...  |               |           |
-| 10   | Supplier Y                    |                | ...  |               |           |
-| 11   | Supplier Y                    |                | ...  |               |           |
-| 12   | Supplier Z                    |                | ...  |               |           |
-| 13   | Supplier Z                    |                | ...  |               |           |
-| 14   | Supplier Z                    |                | ...  |               |           |
-| 15   | Supplier Z                    |                | ...  |               |           |
-| 16   | I don't care this line either |                | ...  |               |           |
-| 17   | I don't care this line either |                | ...  |               |           |
-| 18   | I don't care this line either |                | ...  |               |           |
+| 4    | Supplier X                    | 001-1001       | ...  | 1/20/14       | 1         |
+| 5    | Supplier X                    | 001-1001       | ...  | 1/20/14       | 2         |
+| 6    | Supplier X                    | 001-1001       | ...  | 1/20/14       | 3         |
+| 7    | Supplier X                    | 001-1001       | ...  | 1/20/14       | 4         |
+| 8    | Supplier Y                    | 50-9501        | ...  | 1/30/14       | 5         |
+| 9    | Supplier Y                    | 50-9501        | ...  | 1/30/14       | 6         |
+| 10   | Supplier Y                    | 50-9505        | ...  | 2002/3/14     | 7         |
+| 11   | Supplier Y                    | 50-9505        | ...  | 2002/3/14     | 8         |
+| 12   | Supplier Z                    | 920-4803       | ...  | 2002/3/14     | 9         |
+| 13   | Supplier Z                    | 920-4804       | ...  | 2002/10/14    | 10        |
+| 14   | Supplier Z                    | 920-4805       | ...  | 2/17/14       | 11        |
+| 15   | Supplier Z                    | 920-4806       | ...  | 2/24/14       | 12        |
+| 16   | I don't care this line either | NaN            | ...  | NaN           | NaN       |
+| 17   | I don't care this line either | NaN            | ...  | NaN           | NaN       |
+| 18   | I don't care this line either | NaN            | ...  | NaN           | NaN       |
 
 
 
