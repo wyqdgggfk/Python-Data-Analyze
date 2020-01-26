@@ -530,7 +530,20 @@ print(data_frame)
 | 17   | I don't care this line either | NaN            | ...  | NaN           | NaN       |
 | 18   | I don't care this line either | NaN            | ...  | NaN           | NaN       |
 
+```python
+# 第二次 print
+import pandas as pd
+import sys
+input_file = '/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/supplier_data_unnecessary_header_footer.csv' # 请注意此处需要替换为您自己电脑上对应文件的路径
+output_file = '/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/pandas_output_select_contiguous_rows.csv' # 请注意此处需要替换为您自己电脑上对应文件的路径
 
+data_frame = pd.read_csv(input_file,header=None)
+
+data_frame = data_frame.drop([0,1,2,16,17,18])
+print(data_frame)
+```
+
+此时的输出已经没有了开头的 I don't care this line 和结尾的 I don't care this line either
 
 
 
