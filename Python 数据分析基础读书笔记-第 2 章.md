@@ -549,14 +549,14 @@ print(data_frame)
 
 |      | 0                             | 1              | 2           | 3          | 4             | 5         |
 | ---- | ----------------------------- | -------------- | ----------- | ---------- | ------------- | --------- |
-| 0    | Supplier Name                 | Invoice Number | Part Number | Cost       | Purchase Date | indextest |
-|      | Supplier X                    | 001-1001       | 2341        | 1/20/14    | 1             |           |
-|      |                               |                |             |            |               |           |
-| 3    |                               |                |             |            |               |           |
-| 4    |                               |                |             |            |               |           |
-| 5    | Supplier X                    | 001-1001       | ...         | 1/20/14    | 2             |           |
-| 6    | Supplier X                    | 001-1001       | ...         | 1/20/14    | 3             |           |
-| 7    | Supplier X                    | 001-1001       | ...         | 1/20/14    | 4             |           |
+| 3    | Supplier Name                 | Invoice Number | Part Number | Cost       | Purchase Date | indextest |
+| 4    | Supplier X                    | 001-1001       | 2341        |            | 1/20/14       | 1         |
+| 5    | Supplier X                    | 001-1001       | 2341        |            | 1/20/14       | 2         |
+| 6    | Supplier X                    | 001-1001       | 5467        |            | 1/20/14       | 3         |
+| 7    | Supplier X                    | 001-1001       | ...         |            | 1/20/14       | 4         |
+| 8    |                               |                |             |            |               |           |
+| 9    |                               |                |             |            |               |           |
+| 7    |                               |                |             |            |               |           |
 | 8    | Supplier Y                    | 50-9501        | ...         | 1/30/14    | 5             |           |
 | 9    | Supplier Y                    | 50-9501        | ...         | 1/30/14    | 6             |           |
 | 10   | Supplier Y                    | 50-9505        | ...         | 2002/3/14  | 7             |           |
