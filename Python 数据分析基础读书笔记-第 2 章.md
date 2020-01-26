@@ -420,7 +420,28 @@ with open(input_file,'r',newline='') as csv_in_file:
 
 ## 2.4 选取连续的行
 
+书中提到有时我们可能会遇到工作表的头部和尾部都是不想处理的信息，此时需要选择那些我们需要处理的数据，可参考以下代码：
 
+```python
+import csv
+import sys
+input_file = sys.argv[1] # 此处是 supplier_data_unnecessary_header_footer.csv
+output_file = sys.argv[2] # 此处是 11output.csv
+row_counter = 0	
+
+with open(input_file,'r',newline='') as csv_in_file:
+	with open(output_file,'w',newline='') as csv_out_file:
+		filereader = csv.reader(csv_in_file)
+		filewriter = csv.writer(csv_out_file)
+		for row in filereader:
+			if row_counter >= 3 and row_counter <= 15:
+				filewriter.writerow([value.strip() for value in row])
+			row_counter += 1
+```
+
+以上代码可以在 supplier_data_unnecessary_header_footer.csv 这个文件中跳过行开头的数据，过滤行结尾的数据，只选择我们需要的部分。
+
+另外，在实际操作过程中，我将 supplier_data.csv 另存为一个新的 csv 文件，添加三行 “I don't care this line” 到表头，又添加三行“I don't care this line either” 到表尾，并保存成 supplier_data_unnecessary_header_footer.csv 时，运行上述代码遇到一个问题，错误提示是“UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd5 in position 5: invalid continuation byte”，网上查了一下这应该是 utf-8 的解码问题，如果您也遇到了类似问题，不妨试试我的方法：把所有单元格的内容整体复制下来，新建一个 csv 文件粘贴进去，我是这样解决的。
 
 
 

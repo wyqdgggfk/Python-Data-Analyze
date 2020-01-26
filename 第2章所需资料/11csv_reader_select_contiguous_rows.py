@@ -1,7 +1,7 @@
 import csv
 import sys
-input_file = sys.argv[1]
-output_file = sys.argv[2]
+input_file = sys.argv[1] # 此处是 supplier_data_unnecessary_header_footer.csv
+output_file = sys.argv[2] # 此处是 11output.csv
 row_counter = 0	
 
 with open(input_file,'r',newline='') as csv_in_file:
