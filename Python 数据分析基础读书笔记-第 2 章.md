@@ -467,13 +467,20 @@ data_frame = data_frame.reindex(data_frame.index.drop(3))
 
 到底能达到什么目的？在网上查了一下，drop() 函数的功能是把 data_frame 中对应的行或列的值抛掉，那么 `data_frame.index.drop(3)` 是什么鬼，打开已经操作好的 [pandas_output_select_contiguous_rows.csv](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第2章所需资料/pandas_output_select_contiguous_rows.csv) 文件，它是长这个样子的：
 
-
-
-Supplier Name | Invoice Number | Part Number | Cost | Purchase Date | indextest|
-
----- | ---- | ---- | ---- | ---- | ----|
-
-Supplier X|001-1001|2341|$500.0|01/20/14|1|
+| Supplier Name | Invoice Number | Part Number | Cost         |      | Purchase Date | indextest |
+| ------------- | -------------- | ----------- | ------------ | ---- | ------------- | --------- |
+| Supplier X    | 001-1001       | 2341        | $500.00      |      | 1/20/14       | 1         |
+| Supplier X    | 001-1001       | 2341        | $500.00      |      | 1/20/14       | 2         |
+| Supplier X    | 001-1001       | 5467        | $750.00      |      | 1/20/14       | 3         |
+| Supplier X    | 001-1001       | 5467        | $750.00      |      | 1/20/14       | 4         |
+| Supplier Y    | 50-9501        | 7009        | $250.00      |      | 1/30/14       | 5         |
+| Supplier Y    | 50-9501        | 7009        | $250.00      |      | 1/30/14       | 6         |
+| Supplier Y    | 50-9505        | 6650        | $125.00      |      | 2002/3/14     | 7         |
+| Supplier Y    | 50-9505        | 6650        | $125.00      |      | 2002/3/14     | 8         |
+| Supplier Z    | 920-4803       | 3321        | $615.00      |      | 2002/3/14     | 9         |
+| Supplier Z    | 920-4803       | 3321        | $615.00      |      | 2002/10/14    | 10        |
+| Supplier Z    | 920-4803       | 3321        | $60,15.00    |      | 2/17/14       | 11        |
+| Supplier Z    | 920-4803       | 3321        | $10,06015.00 |      | 2/24/14       | 12        |
 
 
 
