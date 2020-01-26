@@ -530,6 +530,8 @@ print(data_frame)
 | 17   | I don't care this line either | NaN            | ...  | NaN           | NaN       |
 | 18   | I don't care this line either | NaN            | ...  | NaN           | NaN       |
 
+利用 `data_frame = pd.read_csv(input_file,header=None) ` 这一句代码，将 supplier_data_unnecessary_header_footer.csv 文件中的所有信息赋值给了 data_frame，不得不说真心方便。
+
 ```python
 # 第二次 print
 import pandas as pd
@@ -543,7 +545,29 @@ data_frame = data_frame.drop([0,1,2,16,17,18])
 print(data_frame)
 ```
 
-此时的输出已经没有了开头的 I don't care this line 和结尾的 I don't care this line either
+此时的输出已经没有了开头的 `I don't care this line` 和结尾的 `I don't care this line either`，其输出为：
+
+|      | 0                             | 1              | 2           | 3          | 4             | 5         |
+| ---- | ----------------------------- | -------------- | ----------- | ---------- | ------------- | --------- |
+| 0    | Supplier Name                 | Invoice Number | Part Number | Cost       | Purchase Date | indextest |
+|      | Supplier X                    | 001-1001       | 2341        | 1/20/14    | 1             |           |
+|      |                               |                |             |            |               |           |
+| 3    |                               |                |             |            |               |           |
+| 4    |                               |                |             |            |               |           |
+| 5    | Supplier X                    | 001-1001       | ...         | 1/20/14    | 2             |           |
+| 6    | Supplier X                    | 001-1001       | ...         | 1/20/14    | 3             |           |
+| 7    | Supplier X                    | 001-1001       | ...         | 1/20/14    | 4             |           |
+| 8    | Supplier Y                    | 50-9501        | ...         | 1/30/14    | 5             |           |
+| 9    | Supplier Y                    | 50-9501        | ...         | 1/30/14    | 6             |           |
+| 10   | Supplier Y                    | 50-9505        | ...         | 2002/3/14  | 7             |           |
+| 11   | Supplier Y                    | 50-9505        | ...         | 2002/3/14  | 8             |           |
+| 12   | Supplier Z                    | 920-4803       | ...         | 2002/3/14  | 9             |           |
+| 13   | Supplier Z                    | 920-4804       | ...         | 2002/10/14 | 10            |           |
+| 14   | Supplier Z                    | 920-4805       | ...         | 2/17/14    | 11            |           |
+| 15   | Supplier Z                    | 920-4806       | ...         | 2/24/14    | 12            |           |
+| 16   | I don't care this line either | NaN            | ...         | NaN        | NaN           |           |
+| 17   | I don't care this line either | NaN            | ...         | NaN        | NaN           |           |
+| 18   | I don't care this line either | NaN            | ...         | NaN        | NaN           |           |
 
 
 
