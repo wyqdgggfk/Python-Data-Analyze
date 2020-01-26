@@ -448,8 +448,8 @@ with open(input_file,'r',newline='') as csv_in_file:
 ```python
 import pandas as pd
 import sys
-input_file = sys.argv[1]
-output_file = sys.argv[2]
+input_file = sys.argv[1] # 此处为 supplier_data_unnecessary_header_footer.csv
+output_file = sys.argv[2] # 此处为 pandas_output_select_contiguous_rows.csv
 
 data_frame = pd.read_csv(input_file,header=None)
 data_frame = data_frame.drop([0,1,2,16,17,18])
@@ -465,7 +465,13 @@ data_frame.to_csv(output_file,index=False)
 data_frame = data_frame.reindex(data_frame.index.drop(3))
 ```
 
-到底能达到什么目的？在网上查了一下，drop() 函数的功能是把 data_frame 中对应的行或列的值抛掉，那么 `data_frame.index.drop(3)` 是什么鬼
+到底能达到什么目的？在网上查了一下，drop() 函数的功能是把 data_frame 中对应的行或列的值抛掉，那么 `data_frame.index.drop(3)` 是什么鬼，打开已经操作好的 [pandas_output_select_contiguous_rows.csv](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第2章所需资料/pandas_output_select_contiguous_rows.csv) 文件，它是长这个样子的：
+
+Supplier Name | Invoice Number | Part Number | Cost | Purchase Date | indextest
+
+---- | ---- | ---- | ---- | ---- | ----
+
+
 
 
 

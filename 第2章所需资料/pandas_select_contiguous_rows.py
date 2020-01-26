@@ -1,7 +1,7 @@
 import pandas as pd
 import sys
-input_file = sys.argv[1]
-output_file = sys.argv[2]
+input_file = sys.argv[1] # 此处为 supplier_data_unnecessary_header_footer.csv
+output_file = sys.argv[2] # 此处为 pandas_output_select_contiguous_rows.csv
 
 data_frame = pd.read_csv(input_file,header=None)
 data_frame = data_frame.drop([0,1,2,16,17,18])
