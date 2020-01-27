@@ -586,7 +586,7 @@ print(data_frame)
 
 接下来的一段代码，把列标题提出来了，请看 coderunner 中的运行结果
 
-| 3    | Supplier Name | Invoice Number | 2           | 3            | 4             | 5         |
+| 3    | Supplier Name | Invoice Number | Part Number | Cost         | Purchase Date | indextest |
 | ---- | ------------- | -------------- | ----------- | ------------ | ------------- | --------- |
 | 3    | Supplier Name | Invoice Number | Part Number | Cost         | Purchase Date | indextest |
 | 4    | Supplier X    | 001-1001       | 2341        | $500.00      | 1/20/14       | 1         |
