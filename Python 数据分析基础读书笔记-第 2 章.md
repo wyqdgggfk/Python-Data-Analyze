@@ -677,10 +677,6 @@ print(data_frame)
 
 
 
-接下来的一段代码，把列标题提出来了，请看 coderunner 中的运行结果
-
-
-
 
 
 
