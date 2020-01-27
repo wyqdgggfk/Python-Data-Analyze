@@ -604,9 +604,36 @@ print(data_frame)
 
 ```python
 # 第四次 print
+import pandas as pd
+import sys
+input_file = '/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/supplier_data_unnecessary_header_footer.csv' # 请注意此处需要替换为您自己电脑上对应文件的路径
+output_file = '/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/pandas_output_select_contiguous_rows.csv' # 请注意此处需要替换为您自己电脑上对应文件的路径
+
+data_frame = pd.read_csv(input_file,header=None)
+data_frame = data_frame.drop([0,1,2,16,17,18])
+data_frame.columns = data_frame.iloc[0]
+data_frame = data_frame.drop(3)
+print(data_frame)
 ```
 
+| 3    | Supplier Name | Invoice Number | Part Number | Cost         | Purchase Date | indextest |
+| ---- | ------------- | -------------- | ----------- | ------------ | ------------- | --------- |
+| 4    | Supplier X    | 001-1001       | 2341        | $500.00      | 1/20/14       | 1         |
+| 5    | Supplier X    | 001-1001       | 2341        | $500.00      | 1/20/14       | 2         |
+| 6    | Supplier X    | 001-1001       | 5467        | $750.00      | 1/20/14       | 3         |
+| 7    | Supplier X    | 001-1001       | 5467        | $750.00      | 1/20/14       | 4         |
+| 8    | Supplier Y    | 50-9501        | 7009        | $250.00      | 1/30/14       | 5         |
+| 9    | Supplier Y    | 50-9501        | 7009        | $250.00      | 1/30/14       | 6         |
+| 10   | Supplier Y    | 50-9505        | 6650        | $125.00      | 2002/3/14     | 7         |
+| 11   | Supplier Y    | 50-9505        | 6650        | $125.00      | 2002/3/14     | 8         |
+| 12   | Supplier Z    | 920-4803       | 3321        | $615.00      | 2002/3/14     | 9         |
+| 13   | Supplier Z    | 920-4804       | 3321        | $615.00      | 2002/10/14    | 10        |
+| 14   | Supplier Z    | 920-4805       | 3321        | $60,15.00    | 2/17/14       | 11        |
+| 15   | Supplier Z    | 920-4806       | 3321        | $10,06015.00 | 2/24/14       | 12        |
 
+这证明 `data_frame.drop(3)` 这段命令的确把多余的 Supplier Name 那一行去掉了，注意去掉的是第二个 Supplier Name 那一行，并不是第一个。
+
+好了，测试完成，让我们回到书中代码本身，并再来一个打印，看看究竟有什么变化：
 
 ```python
 # 第五次 print
@@ -622,7 +649,7 @@ data_frame = data_frame.reindex(data_frame.index.drop(3)) # 为了弄懂这一�
 print(data_frame)
 ```
 
-第四次 `print `中，主要就是解释`data_frame = data_frame.reindex(data_frame.index.drop(3))`这一段的含义，
+第五次 `print `中，主要就是解释`data_frame = data_frame.reindex(data_frame.index.drop(3))`这一段的含义，按照刚刚小测试的结果，`data_frame.index.drop(3)`丢掉了第二个 Supplier Name 那一行，而 `data_frame.reindex()`的含义就是重新创建索引，合起来就是，先删掉多余的 Supplier Name，再重建索引，其打印结果与上面的那个表格一致，最后再写入到新的 csv 文件即可。
 
 
 
