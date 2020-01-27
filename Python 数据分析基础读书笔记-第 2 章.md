@@ -565,11 +565,42 @@ print(data_frame)
 
 上面的代码用了一段 drop 函数 `data_frame = data_frame.drop([0,1,2,16,17,18])`将第 0，1，2，16，17，18 行数据删除掉。
 
+然后我们再来看看 `data_frame.iloc[0]` 能干什么，书上是说可以使用 iloc 这个函数根据行索引选取一个单独行作为列索引，那么使用 iloc[0] 应该就是把第 0 行的各个单元格的值作为索引，从实际代码来看，也确实如此：
+
+```python
+# 第三次 print
+import pandas as pd
+import sys
+input_file = '/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/supplier_data_unnecessary_header_footer.csv' # 请注意此处需要替换为您自己电脑上对应文件的路径
+output_file = '/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/pandas_output_select_contiguous_rows.csv' # 请注意此处需要替换为您自己电脑上对应文件的路径
+
+data_frame = pd.read_csv(input_file,header=None)
+data_frame = data_frame.drop([0,1,2,16,17,18])
+data_frame.columns = data_frame.iloc[0]
+print(data_frame)
+```
+
+这一次 `print` 把上一次打印的第一排的 0 1 2 3 4 5 换成了列标题，如下所示：
+
 
 
 接下来的一段代码，把列标题提出来了，请看 coderunner 中的运行结果
 
-
+| 3    | Supplier Name | Invoice Number | 2           | 3            | 4             | 5         |
+| ---- | ------------- | -------------- | ----------- | ------------ | ------------- | --------- |
+| 3    | Supplier Name | Invoice Number | Part Number | Cost         | Purchase Date | indextest |
+| 4    | Supplier X    | 001-1001       | 2341        | $500.00      | 1/20/14       | 1         |
+| 5    | Supplier X    | 001-1001       | 2341        | $500.00      | 1/20/14       | 2         |
+| 6    | Supplier X    | 001-1001       | 5467        | $750.00      | 1/20/14       | 3         |
+| 7    | Supplier X    | 001-1001       | 5467        | $750.00      | 1/20/14       | 4         |
+| 8    | Supplier Y    | 50-9501        | 7009        | $250.00      | 1/30/14       | 5         |
+| 9    | Supplier Y    | 50-9501        | 7009        | $250.00      | 1/30/14       | 6         |
+| 10   | Supplier Y    | 50-9505        | 6650        | $125.00      | 2002/3/14     | 7         |
+| 11   | Supplier Y    | 50-9505        | 6650        | $125.00      | 2002/3/14     | 8         |
+| 12   | Supplier Z    | 920-4803       | 3321        | $615.00      | 2002/3/14     | 9         |
+| 13   | Supplier Z    | 920-4804       | 3321        | $615.00      | 2002/10/14    | 10        |
+| 14   | Supplier Z    | 920-4805       | 3321        | $60,15.00    | 2/17/14       | 11        |
+| 15   | Supplier Z    | 920-4806       | 3321        | $10,06015.00 | 2/24/14       | 12        |
 
 
 
