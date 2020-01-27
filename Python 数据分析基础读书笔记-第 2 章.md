@@ -582,10 +582,6 @@ print(data_frame)
 
 这一次 `print` 把上一次打印的第一排的 0 1 2 3 4 5 换成了列标题，如下所示：
 
-
-
-接下来的一段代码，把列标题提出来了，请看 coderunner 中的运行结果
-
 | 3    | Supplier Name | Invoice Number | Part Number | Cost         | Purchase Date | indextest |
 | ---- | ------------- | -------------- | ----------- | ------------ | ------------- | --------- |
 | 3    | Supplier Name | Invoice Number | Part Number | Cost         | Purchase Date | indextest |
@@ -603,6 +599,14 @@ print(data_frame)
 | 15   | Supplier Z    | 920-4806       | 3321        | $10,06015.00 | 2/24/14       | 12        |
 
 
+
+
+
+
+
+
+
+接下来的一段代码，把列标题提出来了，请看 coderunner 中的运行结果
 
 
 
