@@ -651,7 +651,7 @@ print(data_frame)
 
 第五次 `print `中，主要就是解释`data_frame = data_frame.reindex(data_frame.index.drop(3))`这一段的含义，按照刚刚小测试的结果，`data_frame.index.drop(3)`丢掉了第二个 Supplier Name 那一行，而 `data_frame.reindex()`的含义就是重新创建索引，合起来就是，先删掉多余的 Supplier Name，再重建索引，其打印结果与上面的那个表格一致，最后再写入到新的 csv 文件即可。
 
-
+## 2.5 添加标题行
 
 
 
