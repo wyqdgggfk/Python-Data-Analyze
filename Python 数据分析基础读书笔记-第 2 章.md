@@ -614,7 +614,7 @@ data_frame = data_frame.reindex(data_frame.index.drop(3)) # 为了弄懂这一�
 print(data_frame)
 ```
 
-
+第四次 `print `中，主要就是解释`data_frame = data_frame.reindex(data_frame.index.drop(3))`这一段的含义，
 
 
 
