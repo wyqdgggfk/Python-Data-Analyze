@@ -598,7 +598,43 @@ print(data_frame)
 | 14   | Supplier Z    | 920-4805       | 3321        | $60,15.00    | 2/17/14       | 11        |
 | 15   | Supplier Z    | 920-4806       | 3321        | $10,06015.00 | 2/24/14       | 12        |
 
-我试过把代码中的 `iloc[0]` 换成 `iloc[1]`，此时上面的列标题也会随之更换，意味着我们通过 `iloc[]`这个函数实现了重新根据行索引选取一个单独行来作为列索引，可是明明在`data_frame = data_frame.drop([0,1,2,16,17,18])` 中不是已经把第 0 行丢掉了么？是的，丢掉了，`iloc[0]`在这段代码里面指的也不是最初的第 0 行，请看表格最左的数字，`iloc[0]`指代的是数字 3 那一行，
+我试过把代码中的 `iloc[0]` 换成 `iloc[1]`，此时上面的列标题也会随之更换，意味着我们通过 `iloc[]`这个函数实现了重新根据行索引选取一个单独行来作为列索引，可是明明在`data_frame = data_frame.drop([0,1,2,16,17,18])` 中不是已经把第 0 行丢掉了么？是的，丢掉了，`iloc[0]`在这段代码里面指的也不是最初的第 0 行，请看表格最左的数字，`iloc[0]`指代的是数字 3 那一行。
+
+```python
+# 第四次 print
+import pandas as pd
+import sys
+input_file = '/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/supplier_data_unnecessary_header_footer.csv' # 请注意此处需要替换为您自己电脑上对应文件的路径
+output_file = '/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/pandas_output_select_contiguous_rows.csv' # 请注意此处需要替换为您自己电脑上对应文件的路径
+
+data_frame = pd.read_csv(input_file,header=None)
+data_frame = data_frame.drop([0,1,2,16,17,18])
+data_frame.columns = data_frame.iloc[0]
+data_frame = data_frame.reindex(data_frame.index.drop(3)) # 为了弄懂这一行代码的含义，我在 csv 文件中加了一列 indextest 索引，从 1 到 12
+print(data_frame)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
