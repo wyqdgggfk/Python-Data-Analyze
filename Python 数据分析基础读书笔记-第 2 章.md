@@ -694,6 +694,8 @@ data_frame.to_csv(output_file,index=False)
 
 书中需要让读者自行创建三个 csv 文件，分别是 sales_january_2014.csv，sales_february_2014.csv，sales_march_2014.csv，所创建的 csv 文件内容是 Customer ID，Customer Name，Invoice Number，Sale Amount，Purchase Date 这种信息，那么我们不妨结合一下之前所学过的内容，试试看统计一下我自己从[国家统计局](http://www.stats.gov.cn)获取的[房地产开发投资情况](https://github.com/wyqdgggfk/Python-Data-Analyze/tree/master/房地产开发投资情况)，这里面我已经准备好了 excel 文件和 csv 文件，稍后我们会先从 csv 文件入手。
 
+### 文件计数与文件中的行列计数
+
 开始之前先看看两个库，首先看一个 Python 自带的库 glob，参考了一下网上的资料，这个库的功能就是获取当前文件夹下的子文件和子文件夹，用 * 作通配符匹配，比如下面的代码：
 
 ```python
