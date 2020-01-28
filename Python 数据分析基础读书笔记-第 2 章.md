@@ -692,7 +692,7 @@ data_frame.to_csv(output_file,index=False)
 
 ## 2.6 读取多个 CSV 文件
 
-
+书中需要让读者自行创建三个 csv 文件，分别是 sales_january_2014.csv，sales_february_2014.csv，sales_march_2014.csv，
 
 
 
