@@ -676,6 +676,20 @@ with open(input_file,'r',newline='') as csv_in_file:
 			filewriter.writerow(row)		
 ```
 
+同样的功能，如果用 pandas 会更简单一些，毕竟书中的原话是“pandas 中的 read_csv 可以直接指定输入文件不包含标题行，并可以提供一个列标题列表”，可参考以下代码：
+
+```python
+import pandas as pd
+import sys
+
+input_file = sys.argv[1] # 此处为 supplier_data_no_header_row.csv
+output_file = sys.argv[2] # 此处为 pandas_add_header_row_output.csv
+
+header_list = ['Supplier Name','Invoice Number','Part Number','Cost','Purchase Date']
+data_frame = pd.read_csv(input_file,header=None,names=header_list)
+data_frame.to_csv(output_file,index=False)
+```
+
 
 
 
