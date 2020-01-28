@@ -729,7 +729,41 @@ path_final = os.path.join(path1, path2,path3)
 print(path_final) # 此时输出的 path_final 就是 home/admin/document
 ```
 
-明白了这些之后，如果我们想要看懂书上的 8csv_reader_counts_for_multiple_ﬁles.py 源代码，还有一个需要了解，试想一下，如果我们要找某个文件夹中所有以 sales 开头的文件，应该怎样处理？
+明白了这些之后，如果我们想要看懂书上的 8csv_reader_counts_for_multiple_ﬁles.py 源代码，还有一个需要了解，试想一下，如果我们要找某个文件夹中所有以 pandas 开头的文件，应该怎样处理？我们试试看找一下之前我们保存过的以 pandas 开头的文件：
+
+```python
+import os
+import glob
+
+test_file = '/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料' # 注意此处要换成您自己电脑上对应的路径
+for pandasfile in glob.glob(os.path.join(test_file, 'pandas_*')):
+	print(pandasfile)
+```
+
+这里用到了 `glob.glob(os.path.join(test_file, 'pandas_*'))`，实际上这就是我们要找的当前文件夹下所有以 pandas_ 开头的文件，用 * 表示通配查找，打印下来的结果如下：
+
+```python
+"""
+/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/pandas_output_select_contiguous_rows.csv
+/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/pandas_select_contiguous_rows.py
+/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/pandas_value_in_set.py
+/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/pandas_value_meets_condition.py
+/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/pandas_add_header_row_output.csv
+/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/pandas_value_meets_condition.csv
+/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/pandas_value_matches_pattern.py
+/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/pandas_column_by_index.py
+/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/pandas_parsing_and_write.gif
+/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/pandas_add_header_row.py
+/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/pandas_value_matches_pattern_5output.csv
+/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/pandas_output_column_by_index.csv
+/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/pandas_output.csv
+/Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/第2章所需资料/pandas_ parsing_and_write.py
+"""
+```
+
+
+
+
 
 
 
