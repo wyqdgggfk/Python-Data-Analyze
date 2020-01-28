@@ -729,7 +729,7 @@ path_final = os.path.join(path1, path2,path3)
 print(path_final) # 此时输出的 path_final 就是 home/admin/document
 ```
 
-明白了这些之后，如果我们想要看懂书上的 8csv_reader_counts_for_multiple_ﬁles.py 源代码，还有一个需要了解，试想一下，如果我们要找某个文件夹中所有以 sales 开头的文件，应该怎样处理
+明白了这些之后，如果我们想要看懂书上的 8csv_reader_counts_for_multiple_ﬁles.py 源代码，还有一个需要了解，试想一下，如果我们要找某个文件夹中所有以 sales 开头的文件，应该怎样处理？
 
 
 
