@@ -815,7 +815,11 @@ print('Number of files:{0:d}'.format(file_counter))
 python3 8csv_reader_counts_for_multiple_ﬁles.py /Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/房地产开发投资情况/csvFile
 ```
 
+此时终端就会输出每个 csv 文件有多少行多少列，最后会输出一共有多少文件。
 
+## 2.7 从多个文件中连接数据
+
+### 基础 Python
 
 
 
