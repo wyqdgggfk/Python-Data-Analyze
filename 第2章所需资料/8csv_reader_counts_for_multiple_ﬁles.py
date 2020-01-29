@@ -4,7 +4,7 @@ import os
 import sys
 input_path = sys.argv[1]
 file_counter = 0
-for input_file in glob.glob(os.path.join(input_path, '*csv')):
+for input_file in glob.glob(os.path.join(input_path, '*csv')): # 此处把 sales_* 修改为 *csv
 	row_counter = 1
 	with open(input_file,'r',newline='') as csv_in_file:
 		filereader = csv.reader(csv_in_file)
