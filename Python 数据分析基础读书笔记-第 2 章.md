@@ -765,10 +765,6 @@ for pandasfile in glob.glob(os.path.join(test_file, 'pandas_*')):
 
 
 
-d 
-
-
-
 
 
 
