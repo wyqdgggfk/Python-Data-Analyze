@@ -761,6 +761,8 @@ for pandasfile in glob.glob(os.path.join(test_file, 'pandas_*')):
 """
 ```
 
+好了，我们可以开始学习书中第 73 页的代码了，源代码如下：
+
 
 
 
