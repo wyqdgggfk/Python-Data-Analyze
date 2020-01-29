@@ -809,6 +809,12 @@ for input_file in glob.glob(os.path.join(input_path, '*csv')): # 此处把 sales
 print('Number of files:{0:d}'.format(file_counter))
 ```
 
+然后打开终端，导航至 8csv_reader_counts_for_multiple_ﬁles.py 所在的文件夹，并输入如下命令：
+
+```shell
+python3 8csv_reader_counts_for_multiple_ﬁles.py /Users/jason/Documents/GitHub/NoteforPythonDataAnalyze/房地产开发投资情况/csvFile
+```
+
 
 
 
