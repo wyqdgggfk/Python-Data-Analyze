@@ -2,7 +2,6 @@ import csv
 import glob
 import os
 import sys
-
 input_path = sys.argv[1]
 file_counter = 0
 for input_file in glob.glob(os.path.join(input_path, '*csv')):
