@@ -851,7 +851,26 @@ for input_file in glob.glob(os.path.join(input_path, 'sales_*')):
 					filewriter.writerow(row)
 ```
 
+根据上面的代码，我们试试把[房地产开发投资情况](https://github.com/wyqdgggfk/Python-Data-Analyze/tree/master/房地产开发投资情况)中的各个 csv 文件进行一下整合，要求如下：
 
+1. 所有的 csv 文件中的数据需要整合到一张 csv 表里面；
+2. 整合后的数据需要能够看得出来是哪个省份在哪个时间的房地产数据；
+3. 对于单独的每个 csv 文件开头几行的数据库地区时间这些，要剔除掉。
+
+那么我们先打开其中任意一个 csv 文件来看看，它都有些什么数据，打开的方式并不是直接双击这个 csv 文件，因为我们要考虑到在实际工作中，我们可能要打开十几个以 GB 为单位的 csv 文件，同时也为了练习一下刚才的代码，我们试试用 Python 来打开并输出其中一个文件，此处就挑选 内蒙古.csv 这个文件，那么代码可以这样写：
+
+```python
+import csv
+import sys
+input_file = sys.argv[1]
+with open(input_file) as csv_in_file:
+	filereader = csv.reader(csv_in_file)
+	for row in filereader:
+		for cell in row:
+			if cell:
+				print(cell,end='\t')
+		print('\n')
+```
 
 
 
