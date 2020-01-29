@@ -784,7 +784,7 @@ print('Number of files:{0:d}'.format(file_counter))
 
 原书中说运行上面的代码需要在终端执行下面这段代码：
 
-```
+```shell
 python 8csv_reader_counts_for_multiple_files.py "C:\Users\Clinton\Desktop"
 ```
 
