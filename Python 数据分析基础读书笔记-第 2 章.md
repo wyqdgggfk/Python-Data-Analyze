@@ -821,7 +821,7 @@ python3 8csv_reader_counts_for_multiple_ﬁles.py /Users/jason/Documents/GitHub/
 
 实际处理数据时，可能会有多个文件，这些文件的内容格式一致，需要放在一起进行数据统计工作，比如全国各地提交给统计局的房地产数据，它们可能是“北京.csv”，“上海.csv”，“广东.csv”这样的命名方式。
 
-在原书中是将三个 sales 文件的数据合并到一起，我会在这里贴上原代码，同时附上我们自己修改后的代码。
+在原书中是将三个 sales 文件的数据合并到一起，我会在这里贴上[原代码](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第2章所需资料/9csv_reader_concat_rows_from_multiple_ﬁles.py)，同时附上我们自己修改后的代码。
 
 ### 基础 Python
 
