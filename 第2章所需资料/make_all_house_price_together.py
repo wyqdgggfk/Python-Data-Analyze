@@ -2,6 +2,7 @@ import csv
 import glob
 import os
 import sys
+import re
 
 input_path = sys.argv[1]
 output_file = sys.argv[2]
@@ -18,6 +19,12 @@ for input_file in glob.glob(os.path.join(input_path, '*csv')):
 			if first_file:
 				for row in filereader:
 					if row_counter > 3 and row_counter < 9:
+						if row_counter == 4:
+							row.insert(0,"地区")
+						else:
+							pattern = re.compile("\.csv")
+							location_name = re.sub(pattern, '', os.path.basename(input_file))
+							row.insert(0,os.path.basename(input_file))
 						print(row)
 					row_counter += 1
 				first_file = False
