@@ -24,12 +24,15 @@ for input_file in glob.glob(os.path.join(input_path, '*csv')):
 						else:
 							pattern = re.compile("\.csv")
 							location_name = re.sub(pattern, '', os.path.basename(input_file))
-							row.insert(0,location_name))
-						print(row)
+							row.insert(0,location_name)
+						filewriter.writerow(row)
 					row_counter += 1
 				first_file = False
 			else:
 				for row in filereader:
 					if row_counter > 4 and row_counter < 9:
-						print(row)
+						pattern = re.compile("\.csv")
+						location_name = re.sub(pattern, '', os.path.basename(input_file))
+						row.insert(0,location_name)
+						filewriter.writerow(row)
 					row_counter += 1
