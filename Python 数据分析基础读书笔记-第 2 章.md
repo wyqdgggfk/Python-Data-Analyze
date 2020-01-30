@@ -932,7 +932,7 @@ for input_file in glob.glob(os.path.join(input_path, '*csv')):
 
 ### pandas 连接多个文件
 
-
+回顾之前的 drop 函数
 
 
 
