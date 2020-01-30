@@ -22,7 +22,7 @@ for input_file in glob.glob(os.path.join(input_path, '*csv')):
 						if row_counter == 4:
 							row.insert(0,"地区") # 在第 4 行的开头插入一个地区列，用来区分这些数据是哪个省市的
 						else:
-							pattern = re.compile("\.csv")
+							pattern = re.compile("\.csv") # 用正则表达式把文件名的 .csv 去掉，把文件名加入到地区那一列
 							location_name = re.sub(pattern, '', os.path.basename(input_file))
 							row.insert(0,location_name)
 						filewriter.writerow(row)
