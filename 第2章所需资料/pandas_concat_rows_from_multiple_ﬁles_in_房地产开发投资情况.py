@@ -16,14 +16,12 @@ for house_price_file in all_house_price_files:
 		file_name = os.path.basename(house_price_file)
 		pattern = re.compile('\.csv')
 		dictrict_name = re.sub(pattern, '', file_name)
-		print(dictrict_name)
-
 
 		data_frame = pd.read_csv(house_price_file,header=None)
-		data_frame = data_frame.drop([0,1,2])
+		data_frame = data_frame.drop([0,1,2,8])
+		row_counter = len(data_frame)
 		
-		
-		print(data_frame)
+		print(row_counter)
 		first_file = False
 #	else:
 		
