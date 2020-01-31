@@ -14,4 +14,5 @@ for house_price_file in all_house_price_files:
 		data_frame = pd.read_csv(house_price_file,index_col=None)
 		data_frame = data_frame.drop([0,1,2])
 		print(data_frame)
+		first_file = False
 	
