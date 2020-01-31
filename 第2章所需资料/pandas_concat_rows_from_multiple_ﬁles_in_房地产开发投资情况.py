@@ -6,8 +6,8 @@ import re
 
 finishwriting = "Finish writing data to file"
 
-input_path = sys.argv[1]
-output_file = sys.argv[2]
+input_path = sys.argv[1] # 此处为 房地产开发投资情况/csvFile
+output_file = sys.argv[2] # 此处为 pandas_concat_rows_from_multiple_ﬁles_in_房地产开发投资情况.csv
 all_house_price_files = glob.glob(os.path.join(input_path,'*csv'))
 all_data_frames = []
 first_file = True
