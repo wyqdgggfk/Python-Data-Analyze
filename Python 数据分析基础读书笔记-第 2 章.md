@@ -1007,7 +1007,12 @@ for house_price_file in all_house_price_files:
 print(finishwriting)
 ```
 
-原始文件在这里，您也可以查找对应写入好的 [pandas_concat_rows_from_multiple_ﬁles_in_房地产开发投资情况.csv](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第2章所需资料/pandas_concat_rows_from_multiple_ﬁles_in_房地产开发投资情况.csv) 文件，
+原始代码放在这里，您也可以查找对应写入好的 [pandas_concat_rows_from_multiple_ﬁles_in_房地产开发投资情况.csv](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第2章所需资料/pandas_concat_rows_from_multiple_ﬁles_in_房地产开发投资情况.csv) 文件，简单说一下我在写这段代码时遇到的问题，仅供各位参考：
+
+1. 每个省份或直辖市的数据是单独存放在不同的 csv 文件中的，如果我把它们整合到一起，那么会不知道哪个数据属于哪个省份，此时需要在对应数据的前面加一列代表省份或直辖市；
+2. 把所有数据合并到一起时，可能会出现有多个标题列，这并不是我们想看到的，可以设定一个 first_file = True 的旗标，当输入为第一个文件时，我们保存这个标题列，当输入不是第一个文件时，我们用 header=None 来忽略掉标题列，只保留相应数据；
+3. 选择合并的方法并不唯一，可以把所有数据都先整合到一个 all_data_frames 中再统一写入文件，也可以分别写入数据，注意分别写入时，data_frame.to_csv 的限定条件有一个 mode='a'，代表附加写入，而不是覆盖写入；
+4. 乱码问题，解决这个问题的最好办法其实是在 csv 文件中不要包含中文，因为 python 本身对中文的支持并不是很好，当然我们都知道，这在实际应用中是不可能的，你无法要求录入数据的人一个汉字都不写，所以要在处理数据时注意解码问题。
 
 
 
