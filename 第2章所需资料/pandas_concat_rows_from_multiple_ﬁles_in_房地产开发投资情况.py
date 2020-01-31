@@ -4,7 +4,7 @@ import os
 import sys
 import re
 
-finishwriting = ""
+finishwriting = "Finish writing data to file"
 
 input_path = sys.argv[1]
 output_file = sys.argv[2]
@@ -30,7 +30,7 @@ for house_price_file in all_house_price_files:
 		for row in range(data_frame.shape[0]):
 			district_names.append(district_name)
 		data_frame.insert(0,'地区',district_names)
-		data_frame.to_csv(output_file,mode='a',index=None,encoding='utf-8-sig')
+		data_frame.to_csv(output_file,mode='a',index=None,encoding='utf-8-sig') # 需要注意，可能由于一些兼容性问题，我的电脑上编码居然是 utf-8-sig，不然可能出现写入文件乱码
 		print(data_frame)
 		first_file = False
 	else:
@@ -46,4 +46,5 @@ for house_price_file in all_house_price_files:
 			district_names.append(district_name)
 		
 		data_frame.insert(0,'地区',district_names)
-		data_frame.to_csv(output_file,mode='a',index=None,header=None,encoding='utf-8-sig')
+		data_frame.to_csv(output_file,mode='a',index=None,header=None,encoding='utf-8-sig') # mode='a' 意思就是向文件中以附加的方式写入数据，而不是覆盖写入
+print(finishwriting)
