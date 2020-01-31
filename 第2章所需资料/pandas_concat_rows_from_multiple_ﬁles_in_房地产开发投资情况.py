@@ -22,7 +22,7 @@ for house_price_file in all_house_price_files:
 		data_frame = data_frame.drop([0,1,2,8])
 		for row in range(data_frame.shape[0]):
 			district_names.append(district_name)
-		data_frame.insert(0,'地区',['河南','河南','河南','河南','河南'])
+		data_frame.insert(0,'地区',district_names)
 		
 		print(data_frame)
 		first_file = False
