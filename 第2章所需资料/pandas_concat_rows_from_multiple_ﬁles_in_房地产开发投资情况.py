@@ -4,7 +4,7 @@ import os
 import sys
 import re
 
-fengexian = ""
+finishwriting = ""
 
 input_path = sys.argv[1]
 output_file = sys.argv[2]
@@ -47,6 +47,3 @@ for house_price_file in all_house_price_files:
 		
 		data_frame.insert(0,'地区',district_names)
 		data_frame.to_csv(output_file,mode='a',index=None,header=None,encoding='utf-8-sig')
-
-
-print(fengexian)
