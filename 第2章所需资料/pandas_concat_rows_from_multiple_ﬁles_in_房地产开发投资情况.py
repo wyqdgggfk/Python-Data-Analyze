@@ -4,6 +4,8 @@ import os
 import sys
 import re
 
+fengexian = ""
+
 input_path = sys.argv[1]
 output_file = sys.argv[2]
 all_house_price_files = glob.glob(os.path.join(input_path,'*csv'))
@@ -28,13 +30,23 @@ for house_price_file in all_house_price_files:
 		for row in range(data_frame.shape[0]):
 			district_names.append(district_name)
 		data_frame.insert(0,'地区',district_names)
-		all_data_frames.append(data_frame)
+		data_frame.to_csv(output_file,mode='a',index=None,encoding='utf-8-sig')
+		print(data_frame)
 		first_file = False
 	else:
 		district_names = []
 		file_name = os.path.basename(house_price_file)
-		pattern = re.compile('\csv')
+		pattern = re.compile('\.csv')
 		district_name = re.sub(pattern,'',file_name)
 		
 		data_frame = pd.read_csv(house_price_file,header=None)
 		data_frame = data_frame.drop([0,1,2,3,8])
+		
+		for row in range(data_frame.shape[0]):
+			district_names.append(district_name)
+		
+		data_frame.insert(0,'地区',district_names)
+		data_frame.to_csv(output_file,mode='a',index=None,header=None,encoding='utf-8-sig')
+
+
+print(fengexian)
