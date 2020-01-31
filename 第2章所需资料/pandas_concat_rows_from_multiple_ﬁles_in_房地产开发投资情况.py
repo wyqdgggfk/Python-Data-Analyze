@@ -30,4 +30,11 @@ for house_price_file in all_house_price_files:
 		data_frame.insert(0,'地区',district_names)
 		all_data_frames.append(data_frame)
 		first_file = False
-	else:		
+	else:
+		district_names = []
+		file_name = os.path.basename(house_price_file)
+		pattern = re.compile('\csv')
+		district_name = re.sub(pattern,'',file_name)
+		
+		data_frame = pd.read_csv(house_price_file,header=None)
+		data_frame = data_frame.drop([0,1,2,3,8])
