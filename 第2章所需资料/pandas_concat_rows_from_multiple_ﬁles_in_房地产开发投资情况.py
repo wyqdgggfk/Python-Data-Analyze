@@ -28,8 +28,6 @@ for house_price_file in all_house_price_files:
 		for row in range(data_frame.shape[0]):
 			district_names.append(district_name)
 		data_frame.insert(0,'地区',district_names)
-		print(len(district_names))
-		print(data_frame)
+		all_data_frames.append(data_frame)
 		first_file = False
-#	else:
-		
+	else:		
