@@ -932,7 +932,31 @@ for input_file in glob.glob(os.path.join(input_path, '*csv')):
 
 ### pandas 连接多个文件
 
-回顾之前的 drop 函数
+首先我还是贴出书中的原代码：
+
+```python
+import pandas as pd
+import glob
+import os
+import sys
+input_path = sys.argv[1]
+output_file = sys.argv[2]
+all_files = glob.glob(os.path.join(input_path, 'sales_*'))
+all_data_frames = []
+for file in all_files:
+	data_frame = pd.read_csv(file,index_col=None)
+	all_data_frames.append(data_frame)
+data_frame_concat = pd.concat(all_data_frames,axis=0,ignore_index = True)
+data_frame_concat.to_csv(output_file,index=False)
+```
+
+书中第 78 页提到，这段代码是垂直堆叠数据框，如果需要平行连接数据，那么就在 concat 函数中设置 axis=1。我想到了一个平行连接数据的实际需求，试想一下，如果要追踪一群人每年的某些数据，比如 NBA 球星在每年的三分球，场均得分，助攻等等数据，而他们每年的数据是按年列的 csv 表格，就可能需要按平行连接数据，各位看官可以自己试试看。
+
+贴出了原代码，我仍然不会按照这段代码去运行的，而是用 pandas 来整合房地产的数据，下面请看我自己修改过后的代码：
+
+```python
+
+```
 
 
 
