@@ -31,7 +31,6 @@ for house_price_file in all_house_price_files:
 			district_names.append(district_name)
 		data_frame.insert(0,'地区',district_names)
 		data_frame.to_csv(output_file,mode='a',index=None,encoding='utf-8-sig') # 需要注意，可能由于一些兼容性问题，我的电脑上编码居然是 utf-8-sig，不然可能出现写入文件乱码
-		print(data_frame)
 		first_file = False
 	else:
 		district_names = []
