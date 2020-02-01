@@ -4,10 +4,10 @@ import sqlite3
 # 创建带有 4 个属性的 sales 表
 con = sqlite3.connect('you_database_path') # 书中原代码此处是 :memory:，我把它换成了 my_test_database.db 的路径
 query = """CREATE TABLE sales
-			(customer VARCHAR(20),
-			product VARCHAR(40),
-			amount FLOAT,
-			date DATE);"""
+			(customer VARCHAR(20),# 此处表示 customer 属性是一个变长字符型字段，最大字符数为 20
+			product VARCHAR(40), # 此处表示 product 属性也是一个变长字符型字段，最大字符数为 40
+			amount FLOAT, #此处表示 amount 属性是一个浮点数型字段
+			date DATE);""" # 此处表示 date 属性是一个日期字段
 con.execute(query)
 con.commit()
 
