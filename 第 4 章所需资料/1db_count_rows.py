@@ -2,7 +2,7 @@ import sqlite3
 
 # 创建 SQLite3 内存数据库
 # 创建带有 4 个属性的 sales 表
-con = sqlite3.connect(':memory:')
+con = sqlite3.connect('/Users/jason/Desktop/my_test_database.db')
 query = """CREATE TABLE sales
 			(customer VARCHAR(20),
 			product VARCHAR(40),
