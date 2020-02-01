@@ -2,7 +2,6 @@ import sqlite3
 
 # 创建 SQLite3 内存数据库
 # 创建带有 4 个属性的 sales 表
-
 con = sqlite3.connect(':memory')
 query = """CREATE TABLE sales
 			(customer VARCHAR(20),
@@ -10,4 +9,13 @@ query = """CREATE TABLE sales
 			amount FLOAT,
 			date DATE);"""
 con.execute(query)
+con.commit()
+
+# 在表中插入几行数据
+data = [('Richard Lucas','Notepad',2.50,'2014-01-02'),
+		('Jenny Kim','Binder',4.15,'2014-01-15'),
+		('Svetlana Crow','Printer',155.75,'2014-02-03'),
+		('Stephen Randolph','Computer',679.40,'2014-02-20')]	
+statement = "INSERT INTO sales VALUES(?,?,?,?)"
+con.executemany(statement,data)
 con.commit()
