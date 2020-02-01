@@ -8,7 +8,7 @@ query = """CREATE TABLE sales
 			product VARCHAR(40), # 此处表示 product 属性也是一个变长字符型字段，最大字符数为 40
 			amount FLOAT, #此处表示 amount 属性是一个浮点数型字段
 			date DATE);""" # 此处表示 date 属性是一个日期字段
-con.execute(query)
+con.execute(query) # 使用连接对象的 execute() 方法执行包含在变量 query 中的 SQL 命令，创建 sales 表
 con.commit()
 
 # 在表中插入几行数据
