@@ -19,3 +19,14 @@ data = [('Richard Lucas','Notepad',2.50,'2014-01-02'),
 statement = "INSERT INTO sales VALUES(?,?,?,?)"
 con.executemany(statement,data)
 con.commit()
+
+# 查询 sales 表
+cursor = con.execute("SELECT * FROM sales")
+rows = cursor.fetchall()
+
+# 计算查询结果中行的数量
+row_counter = 0
+for row in rows:
+	print(row)
+	row_counter += 1
+print("Number of rows:%d" % (row_counter))
