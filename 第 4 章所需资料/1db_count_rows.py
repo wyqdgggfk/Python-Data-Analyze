@@ -2,7 +2,7 @@ import sqlite3
 
 # 创建 SQLite3 内存数据库
 # 创建带有 4 个属性的 sales 表
-con = sqlite3.connect('you_database_path') # 书中原代码此处是 :memory:，我把它换成了我桌面上 database 的路径
+con = sqlite3.connect('you_database_path') # 书中原代码此处是 :memory:，我把它换成了 my_test_database.db 的路径
 query = """CREATE TABLE sales
 			(customer VARCHAR(20),
 			product VARCHAR(40),
