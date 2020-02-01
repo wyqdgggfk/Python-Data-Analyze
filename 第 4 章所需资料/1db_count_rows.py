@@ -9,7 +9,7 @@ query = """CREATE TABLE sales
 			amount FLOAT, #此处表示 amount 属性是一个浮点数型字段
 			date DATE);""" # 此处表示 date 属性是一个日期字段
 con.execute(query) # 使用连接对象的 execute() 方法执行包含在变量 query 中的 SQL 命令，创建 sales 表
-con.commit()
+con.commit() # 使用连接对象的 commit() 方法来保存修改到数据库，当对数据库进行修改时，必须使用 commit() 方法来保存
 
 # 在表中插入几行数据
 data = [('Richard Lucas','Notepad',2.50,'2014-01-02'),
