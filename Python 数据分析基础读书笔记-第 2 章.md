@@ -1016,4 +1016,35 @@ print(finishwriting)
 
 ## 2.8 计算每个文件中值的总和与均值
 
-To Be Continued...
+#### 基础 Python
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
