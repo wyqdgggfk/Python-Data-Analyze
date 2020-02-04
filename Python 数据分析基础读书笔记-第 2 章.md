@@ -1075,21 +1075,7 @@ for input_file in all_files:
 	data_frames_concat.to_csv(output_file,index=False)
 ```
 
+## 2.9 本章练习
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+第 2 章到这里也就结束了，我们主要学习了对 csv 文件的各种操作，比如选取特定行列，选取连续行列，读取多个 csv 文件，计算总和与均值等等，书中也给我们留下了一些练习。
 
