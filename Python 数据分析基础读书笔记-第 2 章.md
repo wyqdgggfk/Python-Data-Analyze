@@ -1050,6 +1050,8 @@ for input_file in glob.glob(os.path.join(input_path, 'sales_*')):
 csv_out_file.close()
 ```
 
+上面这段代码保存为 [10csv_reader_sum_average_from_multiple_ﬁles.py](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%202%20章所需资料/10csv_reader_sum_average_from_multiple_ﬁles.py)，已经放在我的 GitHub 仓库中了，对应的 csv 文件 [10output.csv](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%202%20章所需资料/计算每个文件中值的总和与均值/10output.csv) 也在仓库中。
+
 #### pandas 实现
 
 相较于 Python 的基础 csv 库，Pandas 提供了 sum 和 mean 这两个摘要统计函数。
