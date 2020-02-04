@@ -1040,13 +1040,3 @@ print(finishwriting)
 
 
 
-
-
-
-
-
-
-
-
-
-
