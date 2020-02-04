@@ -12,9 +12,9 @@ filewriter.writerow(output_header_list) # 将标题行写入输出文件
 for input_file in glob.glob(os.path.join(input_path, 'sales_*')):
 	with open(input_file,'r',newline='') as csv_in_file:
 		filereader = csv.reader(csv_in_file)
-		output_list = []
+		output_list = [] # 用来保存要写入输出文件中的每行输出
 		output_list.append(os.path.basename(input_file))
-		header = next(filereader)
+		header = next(filereader) # next() 函数去除每个输入文件的标题行
 		total_sales = 0.0
 		number_of_sales = 0.0
 		for row in filereader:
