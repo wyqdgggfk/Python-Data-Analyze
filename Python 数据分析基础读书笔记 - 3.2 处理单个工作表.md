@@ -61,6 +61,12 @@ output_workbook.save(output_file)
 
 ### Pandas 读写 Excel 文件
 
+对比一下用 xlrd 和 xlwt 来处理 Excel，你可能会觉得 Pandas 代码量很少，下面是书中的代码：
+
+```python
+
+```
+
 
 
 
