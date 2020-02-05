@@ -6,7 +6,7 @@
 
 #### 基础 Python 和 xlrd、xlwt 模块
 
-如果用基础的 Python 和 xlrd、xlwt 模块来读写一个 Excel 文件，可以参考 2excel_parsing_and_write.py 这个代码：
+如果用基础的 Python 和 xlrd、xlwt 模块来读写一个 Excel 文件，可以参考 [2excel_parsing_and_write.py](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/2excel_parsing_and_write.py) 这个代码：
 
 ```python
 import sys
@@ -87,7 +87,7 @@ data_frame.to_excel(writer,sheet_name='jan_13_output',index=False)
 writer.save()
 ```
 
-
+如果打开
 
 
 
