@@ -74,7 +74,24 @@ data_frame.to_excel(writer,sheet_name='jan_13_output',index=False)
 writer.save()
 ```
 
-如果您运行一遍这段代码,或者您本身对 Pandas 比较了解,应该会发现代码中有一处错误会导致无法运行,
+如果您运行一遍这段代码,或者您本身对 Pandas 比较了解,应该会发现代码中有一处错误会导致无法运行,下面是修改过后的代码,试试看能不能找出哪里有问题:
+
+```python
+import pandas as pd
+import sys
+input_file = sys.argv[1]
+output_file = sys.argv[2]
+data_frame = pd.read_excel(input_file,sheet_name='january_2013')
+writer = pd.ExcelWriter(output_file)
+data_frame.to_excel(writer,sheet_name='jan_13_output',index=False)
+writer.save()
+```
+
+
+
+
+
+
 
 
 
