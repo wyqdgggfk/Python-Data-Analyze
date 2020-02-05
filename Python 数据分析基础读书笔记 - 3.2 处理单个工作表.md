@@ -87,7 +87,7 @@ data_frame.to_excel(writer,sheet_name='jan_13_output',index=False)
 writer.save()
 ```
 
-如果打开
+如果打开 [pandas_output.xls](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/pandas_output.xls) 这个文件,我们会发现 purchase date 也是正确的,并不是以数字方式显示.
 
 
 
