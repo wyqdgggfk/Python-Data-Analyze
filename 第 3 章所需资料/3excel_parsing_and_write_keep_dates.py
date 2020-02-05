@@ -9,17 +9,17 @@ output_worksheet = output_workbook.add_sheet('jan_2013_output')
 with open_workbook(input_file) as workbook:
 	worksheet = workbook.sheet_by_name('january_2013')
 	for row_index in range(worksheet.nrows):
-		row_list_output = []
+		row_list_output = [] # 实际上这个 row_list_output 根本不影响输出文件
 		for col_index in range(worksheet.ncols):
 			"""如果这个单元格是时间"""
 			if worksheet.cell_type(row_index, col_index) == 3:
 				date_cell = xldate_as_tuple(worksheet.cell_value(row_index, col_index), workbook.datemode)
 				date_cell = date(*date_cell[0:3]).strftime('%m/%d/%Y')
-				row_list_output.append(date_cell)
+				row_list_output.append(date_cell) # 实际上这个 row_list_output 根本不影响输出文件
 				output_worksheet.write(row_index,col_index,date_cell)
 			"""如果这个单元格不是时间"""
 			else:
 				non_date_cell = worksheet.cell_value(row_index, col_index)
-				row_list_output.append(non_date_cell)
+				row_list_output.append(non_date_cell) # 实际上这个 row_list_output 根本不影响输出文件
 				output_worksheet.write(row_index,col_index,non_date_cell)
 output_workbook.save(output_file)
