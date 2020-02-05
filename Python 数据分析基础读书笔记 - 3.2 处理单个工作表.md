@@ -25,4 +25,33 @@ with open_workbook(input_file) as workbook:
 output_workbook.save(output_file)
 ```
 
-需要注意，xls 与 xlsx 是有区别的，xlrd 和 xlwt 这两个库对 xls 文件的操作没有问题，但如果您需要对 xlsx 文件进行更好的读写，推荐您看看我的[另一篇文章](https://www.jianshu.com/p/5c1ac33b355f)，另外，如果您自己通过上面的代码运行一次后，可能会发现，Purchase Date 那一列的数据并不是**日期**，而是**数值**，这和 Excel 的工作方式有关，具体原因可以自行查阅，下面主要讲一下如何把数值转换为日期，
+需要注意，xls 与 xlsx 是有区别的，xlrd 和 xlwt 这两个库对 xls 文件的操作没有问题，但如果您需要对 xlsx 文件进行更好的读写，推荐您看看我的[另一篇文章](https://www.jianshu.com/p/5c1ac33b355f)，另外，如果您自己通过上面的代码运行一次后，可能会发现，Purchase Date 那一列的数据并不是**日期**，而是**数值**，这和 Excel 的工作方式有关，具体原因可以自行查阅，下面主要讲一下如何把数值转换为日期。
+
+首先还是看一下书上的原代码，稍后我会进行一些解释：
+
+```python
+import sys
+from datetime import date
+from xlrd import open_workbook,xldate_as_tuple
+from xlwt import Workbook
+input_file = sys.argv[1]
+output_file = sys.argv[2]
+output_workbook = Workbook()
+output_worksheet = output_workbook.add_sheet('jan_2013_output')
+with open_workbook(input_file) as workbook:
+	worksheet = workbook.sheet_by_name('january_2013')
+	for row_index in range(worksheet.nrows):
+		row_list_output = []
+		for col_index in range(worksheet.ncols):
+			if worksheet.cell_type(row_index, col_index) == 3:
+				date_cell = xldate_as_tuple(worksheet.cell_value(row_index, col_index), workbook.datemode)
+				date_cell = date(*date_cell[0:3]).strftime('%m/%d/%Y')
+				row_list_output.append(date_cell)
+				output_worksheet.write(row_index,col_index,date_cell)
+			else:
+				non_date_cell = worksheet.cell_value(row_index, col_index)
+				row_list_output.append(non_date_cell)
+				output_worksheet.write(row_index,col_index,non_date_cell)
+output_workbook.save(output_file)
+```
+
