@@ -108,7 +108,7 @@ writer.save()
 
 此功能主要用于查找,比如我们想从上万条销售数据里面找到某个业务员的销售数据,再比如找到销售额大于某个值的数据,进阶一点,找到某个销售员在某个时间范围内销售额大于某个值的全部数据,接下来请看代码演示.
 
-##### 基础 Python
+##### 基础 Python 处理筛选选中满足某个条件的值
 
 文件名称:[4excel_value_meets_condition.py](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/4excel_value_meets_condition.py)
 
@@ -153,7 +153,7 @@ with open_workbook(input_file) as workbook:
 output_workbook.save(output_file)
 ```
 
-
+##### Pandas 处理筛选行中满足某个条件的值
 
 
 
