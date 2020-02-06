@@ -12,7 +12,7 @@ with open_workbook(input_file) as workbook:
 	data = []
 	header = worksheet.row_values(0) # 获取标题行
 	data.append(header)
-	for row_index in range(1,worksheet.norows):
+	for row_index in range(1,worksheet.nrows):
 		row_list = []
 		sale_amount = worksheet.cell_value(row_index, sale_amount_column_index)
 		if sale_amount > 1400.0:
