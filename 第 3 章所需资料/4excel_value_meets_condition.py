@@ -18,7 +18,7 @@ with open_workbook(input_file) as workbook:
 		if sale_amount > 1400.0:
 			for column_index in range(worksheet.ncols):
 				cell_value = worksheet.cell_value(row_index, column_index)
-				cell_type = worksheet._cell_type(row_index,column_index)
+				cell_type = worksheet.cell_type(row_index,column_index)
 				if cell_type == 3:
 					date_cell = xldate_as_tuple(cell_value, workbook.datemode)
 					date_cell = date(*date_cell[0:3]).strftime('%m/%d/%Y')
