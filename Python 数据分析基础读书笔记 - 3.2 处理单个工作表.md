@@ -162,12 +162,22 @@ output_workbook.save(output_file)
 输出文件:[pandas_value_meets_condition_output.xls](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/pandas_value_meets_condition_output.xls)
 
 ```python
-
+import pandas as pd
+import sys
+input_file = sys.argv[1] # 此处为 sales_2013.xlsx
+output_file = sys.argv[2] # 此处为 pandas_value_meets_condition_output.xls
+data_frame = pd.read_excel(input_file,'january_2013',index_col=None)
+data_frame_value_meets_condition = data_frame[data_frame['Sale Amount'].astype(float) > 1400.0]
+writer = pd.ExcelWriter(output_file)
+data_frame_value_meets_condition.to_excel(writer,sheet_name='jan_13_output',index=False)
+writer.save()
 ```
 
+在原书中有这样一句话:
 
+> 如果你需要设定多个条件,那么可以将这些条件放在圆括号中,根据需要的逻辑顺序用"&"或"|"连接起来.
 
-
+然而很多抱歉,我并没有看到哪个地方适合这样做.
 
 
 
