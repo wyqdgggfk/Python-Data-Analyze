@@ -196,17 +196,17 @@ for column_index in range(worksheet.ncols):
 
 ##### 基础 Python 查找行中属于某个集合的值
 
-文件名称:
+文件名称:5excel_value_in_set.py
 
-所需文件:
+所需文件:sales_2013.xlsx
 
-输出文件:
+输出文件:5output.xls
 
 ```python
 
 ```
 
-这
+这段演示代码与上一功能的演示代码非常类似,大致逻辑都是打开文件,按条件找到符合的数据,然后写入到新文件.
 
 
 
