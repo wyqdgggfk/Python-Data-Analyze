@@ -279,6 +279,12 @@ writer.save()
 
 ##### 基础 Python查找行中匹配特定模式的值
 
+文件名称:6excel_value_matches_pattern.py
+
+所需文件:[sales_2013.xlsx](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/sales_2013.xlsx)
+
+输出文件:
+
 ```python
 
 ```
