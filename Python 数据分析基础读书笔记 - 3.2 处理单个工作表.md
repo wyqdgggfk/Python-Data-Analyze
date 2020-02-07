@@ -181,6 +181,19 @@ writer.save()
 
 #### 2.行中的值属于某个集合
 
+这个功能也与查找相关,而且和上一个功能很类似,但比较上一个功能而言,此功能查找的通常是多个独立的条件,比如某几个日期相关的数据,或者某些人的数据,可参考这个伪代码:
+
+```python
+condition_set = ['name_one','name_two']
+for column_index in range(worksheet.ncols):
+  if cell_value in condition_set:
+    do something
+  else:
+    do other thing
+```
+
+
+
 ##### 基础 Python 查找行中属于某个集合的值
 
 文件名称:
