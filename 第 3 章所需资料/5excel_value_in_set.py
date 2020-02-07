@@ -27,4 +27,9 @@ with open_workbook(input_file) as workbook:
 					row_list.append(date_cell)
 				else:
 					row_list.append(cell_value)
-			
+			if row_list:
+				data.append(row_list)
+	for list_index,output_list in enumerate(data):
+		for element_index,element in enumerate(output_list):
+			output_worksheet.write(list_index,element_index,element)
+output_workbook.save(output_file)
