@@ -3,12 +3,15 @@ import sys
 from datetime import date
 from xlrd import open_workbook,xldate_as_tuple
 from xlwt import Workbook
-input_file = sys.argv[1]
-output_file = sys.argv[2]
+input_file = sys.argv[1] # 此处为 sales_2013.xlsx
+output_file = sys.argv[2] # 此处为 6output.xls
 output_workbook = Workbook()
 output_worksheet = output_workbook.add_sheet('jan_2013_output')
-pattern = re.compile(r'(?P<my_pattern>^J.*)')
+pattern = re.compile(r'(?P<my_pattern>^J.*)') # 这段文字中 ^J.* 是最重要的,意为从开头进行匹配,J后面可跟任意多个字符
 customer_name_column_index = 1
+"""
+以下代码的逻辑与之前很类似,一样是打开文件,逐个单元格查看,如果满足要求,就将此行数据提出
+"""
 with open_workbook(input_file) as workbook:
 	worksheet = workbook.sheet_by_name('january_2013')
 	data = []
