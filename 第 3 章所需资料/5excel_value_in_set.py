@@ -2,7 +2,7 @@ import sys
 from datetime import date
 from xlrd import open_workbook,xldate_as_tuple
 from xlwt import Workbook
-input_file = sys.argv[1]
+input_file = sys.argv[1] # 此处为 
 output_file = sys.argv[2]
 output_workbook = Workbook()
 output_worksheet = output_workbook.add_sheet('jan_2013_output')
@@ -13,7 +13,7 @@ with open_workbook(input_file) as workbook:
 	data = []
 	header = worksheet.row_values(0)
 	data.append(header)
-	for row_index in range(1.worksheet.nrows):
+	for row_index in range(1,worksheet.nrows):
 		purchase_datetime = xldate_as_tuple(worksheet.cell_value(row_index, purchase_date_column_index), workbook.datemode)
 		purchase_date = date(*purchase_datetime[0:3]).strftime('%m/%d/%Y')
 		row_list = []
