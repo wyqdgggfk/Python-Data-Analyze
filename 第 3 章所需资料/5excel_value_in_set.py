@@ -11,4 +11,5 @@ purchase_date_column_index = 4
 with open_workbook(input_file) as workbook:
 	worksheet = workbook.sheet_by_name('january_2013')
 	data = []
+	header = worksheet.row_values(0)
 	
