@@ -22,4 +22,9 @@ with open_workbook(input_file) as workbook:
 				cell_value = worksheet.cell_value(row_index, column_index)
 				cell_type = worksheet.cell_type(row_index, column_index)
 				if cell_type == 3:
-					
+					date_cell = xldate_as_tuple(cell_value, workbook.datemode)
+					date_cell = date(*date_cell[0:3]).strftime('%m/%d/%Y')
+					row_list.append(date_cell)
+				else:
+					row_list.append(cell_value)
+			
