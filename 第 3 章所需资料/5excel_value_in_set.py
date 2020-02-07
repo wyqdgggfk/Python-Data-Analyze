@@ -15,3 +15,11 @@ with open_workbook(input_file) as workbook:
 	data.append(header)
 	for row_index in range(1.worksheet.nrows):
 		purchase_datetime = xldate_as_tuple(worksheet.cell_value(row_index, purchase_date_column_index), workbook.datemode)
+		purchase_date = date(*purchase_datetime[0:3]).strftime('%m/%d/%Y')
+		row_list = []
+		if purchase_date in important_dates:
+			for column_index in range(worksheet.ncols):
+				cell_value = worksheet.cell_value(row_index, column_index)
+				cell_type = worksheet.cell_type(row_index, column_index)
+				if cell_type == 3:
+					
