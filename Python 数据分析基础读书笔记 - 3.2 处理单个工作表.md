@@ -244,6 +244,25 @@ output_workbook.save(output_file)
 
 ##### Pandas 查找行中属于某个集合的值
 
+文件名称:[pandas_value_in_set.py](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/pandas_value_in_set.py)
+
+所需文件:[sales_2013.xlsx](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/sales_2013.xlsx)
+
+输出文件:[pandas_5output.xls](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/pandas_5output.xls)
+
+```python
+import pandas as pd
+import sys
+input_file = sys.argv[1]
+output_file = sys.argv[2]
+data_frame = pd.read_excel(input_file,'january_2013',index_col=None)
+important_dates = ['01/24/2013','01/31/2013']
+data_frame_value_in_set = data_frame[data_frame['Purchase Date'].isin(important_dates)]
+writer = pd.ExcelWriter(output_file)
+data_frame_value_in_set.to_excel(writer,sheet_name='jan_13_output',index=False)
+writer.save()
+```
+
 
 
 
