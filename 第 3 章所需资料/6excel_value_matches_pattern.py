@@ -24,3 +24,9 @@ with open_workbook(input_file) as workbook:
 					date_cell = xldate_as_tuple(cell_value, workbook.datemode)
 					date_cell = date(*date_cell[0:3]).strftime('%m/%d/%Y')
 					row_list.append(date_cell)
+				else:
+					row_list.append(cell_value)
+		if row_list:
+			data.append(row_list)
+	for list_index,output_list in enumerate(output_list):
+		
