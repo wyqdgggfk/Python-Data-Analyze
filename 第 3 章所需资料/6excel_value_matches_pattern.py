@@ -14,4 +14,13 @@ with open_workbook(input_file) as workbook:
 	data = []
 	header = worksheet.row_values(0)
 	data.append(header)
-	
+	for row_index in range(1,worksheet.nrows):
+		row_list = []
+		if pattern.search(worksheet.cell_value(row_index, customer_name_column_index)):
+			for column_index in range(worksheet.ncols):
+				cell_value = worksheet.cell_value(row_index, column_index)
+				cell_type = worksheet.cell_type(row_index, column_index)
+				if cell_type == 3:
+					date_cell = xldate_as_tuple(cell_value, workbook.datemode)
+					date_cell = date(*date_cell[0:3]).strftime('%m/%d/%Y')
+					row_list.append(date_cell)
