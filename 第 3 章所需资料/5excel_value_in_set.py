@@ -12,4 +12,6 @@ with open_workbook(input_file) as workbook:
 	worksheet = workbook.sheet_by_name('january_2013')
 	data = []
 	header = worksheet.row_values(0)
-	
+	data.append(header)
+	for row_index in range(1.worksheet.nrows):
+		purchase_datetime = xldate_as_tuple(worksheet.cell_value(row_index, purchase_date_column_index), workbook.datemode)
