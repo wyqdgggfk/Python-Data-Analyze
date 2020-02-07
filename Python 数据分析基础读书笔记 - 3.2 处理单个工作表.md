@@ -196,11 +196,11 @@ for column_index in range(worksheet.ncols):
 
 ##### 基础 Python 查找行中属于某个集合的值
 
-文件名称:5excel_value_in_set.py
+文件名称:[5excel_value_in_set.py](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/5excel_value_in_set.py)
 
-所需文件:sales_2013.xlsx
+所需文件:[sales_2013.xlsx](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/sales_2013.xlsx)
 
-输出文件:5output.xls
+输出文件:[5output.xls](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/5output.xls)
 
 ```python
 import sys
