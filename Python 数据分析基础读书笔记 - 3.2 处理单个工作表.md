@@ -336,12 +336,20 @@ output_workbook.save(output_file)
 输出文件:
 
 ```python
-
+import pandas as pd
+import sys
+input_file = sys.argv[1] # 此处为 sales_2013.xlsx
+output_file = sys.argv[2] # 此处为 pandas_value_matches_pattern_output
+data_frame = pd.read_excel(input_file,'january_2013',index_col=None)
+data_frame_value_matchs_pattern = data_frame[data_frame['Customer Name'].str.startswith("J")]
+writer = pd.ExcelWriter(output_file)
+data_frame_value_matchs_pattern.to_excel(writer,sheet_name='jan_13_output',index=False)
+writer.save()
 ```
 
+对比一下,使用基础 Python 需要 37 行代码的任务,用 Pandas 仅 9 行即可实现,在实际运用中,可见 Pandas 的重要性和必要性.
 
-
-
+### 3.2.3 选取特定列
 
 
 
