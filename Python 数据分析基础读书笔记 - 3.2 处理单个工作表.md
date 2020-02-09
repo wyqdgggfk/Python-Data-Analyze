@@ -329,11 +329,11 @@ output_workbook.save(output_file)
 
 相较于基础 Python 的匹配特定模式,Pandas 提供了若干字符串和正则表达式函数,包括 startwith,endswith,match 和 search,可以直接使用这些函数在文本中识别子字符串和模式.具体如何做,请看以下示例代码:
 
-文件名称:
+文件名称:[pandas_value_matches_pattern.py](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/pandas_value_matches_pattern.py)
 
 所需文件:[sales_2013.xlsx](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/sales_2013.xlsx)
 
-输出文件:
+输出文件:[pandas_value_matches_pattern_output](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/pandas_value_matches_pattern_output.xls)
 
 ```python
 import pandas as pd
@@ -367,9 +367,9 @@ writer.save()
 
 什么意思呢?就是说如果现在有 50 份 Excel 表格,每人表格打开后,其排列形式都是一样的或者基本一样的(比如前 N 列都一样,只有少数不一样),就可以用列索引这种方式来查找需要的值.请看代码演示:
 
-文件名称:
+文件名称:7excel_column_by_index.py
 
-所需文件:
+所需文件:[sales_2013.xlsx](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/sales_2013.xlsx)
 
 输出文件:
 
