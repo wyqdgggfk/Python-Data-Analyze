@@ -483,7 +483,17 @@ output_workbook.save(output_file)
 
 #### Pandas 选取 Customer ID 和 Purchase Date 列
 
+相较于基础的 Python 代码,我们又会看到 Pandas 的代码量要少得多,主要是关于时间处理那一块,也因此建议大家在处理数据时,务必掌握好 Pandas 的使用.
 
+文件名称:
+
+所需文件:[sales_2013.xlsx](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/sales_2013.xlsx)
+
+输出文件:
+
+```python
+
+```
 
 
 
