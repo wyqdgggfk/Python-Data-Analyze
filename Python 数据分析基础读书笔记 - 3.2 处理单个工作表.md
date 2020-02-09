@@ -440,6 +440,10 @@ writer.save()
 
 输出文件:[8output.xls](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/8output.xls)
 
+```python
+
+```
+
 如果已经从第 2 章看到这里的朋友,其实我们仔细回顾一下这些代码就会发现,很多大同小异,都是打开对应的 Excel 文件,按行列进行读取,如果满足某种要求就取出数据存入到另一文件,当然有时会需要注意,不同的格式可能会引起一些显示上的错误,需要进行修正.
 
 
