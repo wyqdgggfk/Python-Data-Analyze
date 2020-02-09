@@ -434,11 +434,11 @@ writer.save()
 
 #### 基础 Python 选取 Customer ID 和 Purchase Date 列
 
-文件名称:
+文件名称:8excel_column_by_name.py
 
-所需文件:
+所需文件:[sales_2013.xlsx](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/sales_2013.xlsx)
 
-输出文件:
+输出文件:8output.xls
 
 
 
