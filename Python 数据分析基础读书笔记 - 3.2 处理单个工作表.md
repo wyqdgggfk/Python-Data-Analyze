@@ -485,11 +485,11 @@ output_workbook.save(output_file)
 
 相较于基础的 Python 代码,我们又会看到 Pandas 的代码量要少得多,主要是关于时间处理那一块,也因此建议大家在处理数据时,务必掌握好 Pandas 的使用.
 
-文件名称:pandas_column_by_name.py
+文件名称:[pandas_column_by_name.py](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/pandas_column_by_name.py)
 
 所需文件:[sales_2013.xlsx](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/sales_2013.xlsx)
 
-输出文件:pandas_column_by_name_output.xls
+输出文件:[pandas_column_by_name_output.xls](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/pandas_column_by_name_output.xls)
 
 ```python
 import pandas as pd
