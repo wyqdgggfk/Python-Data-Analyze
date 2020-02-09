@@ -367,11 +367,15 @@ writer.save()
 
 什么意思呢?就是说如果现在有 50 份 Excel 表格,每人表格打开后,其排列形式都是一样的或者基本一样的(比如前 N 列都一样,只有少数不一样),就可以用列索引这种方式来查找需要的值.请看代码演示:
 
-文件名称:7excel_column_by_index.py
+文件名称:[7excel_column_by_index.py](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/7excel_column_by_index.py)
 
 所需文件:[sales_2013.xlsx](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/sales_2013.xlsx)
 
-输出文件:
+输出文件:[7output.xls](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/7output.xls)
+
+```python
+
+```
 
 
 
