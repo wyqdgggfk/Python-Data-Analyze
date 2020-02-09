@@ -29,6 +29,7 @@ with open_workbook(input_file) as workbook:
 			else:
 				row_list.append(cell_value)
 		data.append(row_list)
+	"""按照行列的规律写入数据"""
 	for list_index,output_list in enumerate(data):
 		for element_index,element in enumerate(output_list):
 			output_worksheet.write(list_index,element_index,element) # 按行列顺序写入数据
