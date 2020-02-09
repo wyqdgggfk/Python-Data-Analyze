@@ -432,7 +432,7 @@ writer.save()
 
 简而言之,就是根据姓名列,编号列等这些关键信息来进行筛选,下面看看具体怎么操作.
 
-
+#### 基础 Python 选取 Customer ID 和 Purchase Date 列
 
 
 
