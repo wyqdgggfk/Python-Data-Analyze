@@ -66,15 +66,11 @@ output_workbook.save(output_file)
 
 此代码将利用 Pandas 选取 Customer Name 和 Sale Amount 这两列.
 
-文件名称:[pandas_value_meets_condition_all_worksheets.py](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/pandas_value_meets_condition_all_worksheets.py)
+文件名称:pandas_value_meets_condition_all_worksheets.py
 
 所需文件:[sales_2013.xlsx](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/sales_2013.xlsx)
 
-输出文件:[9output_pandas.xls](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/9output_pandas.xls)
-
-
-
-
+输出文件:9output_pandas.xls
 
 
 
