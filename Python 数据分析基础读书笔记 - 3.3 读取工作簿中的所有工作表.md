@@ -70,7 +70,7 @@ output_workbook.save(output_file)
 
 需要声明一下,在写这篇笔记时,已经不再是 `sheetname=None`,而是`sheet_name=None`,多了一个下划线.
 
-文件名称:pandas_value_meets_condition_all_worksheets.py
+文件名称:[pandas_value_meets_condition_all_worksheets.py](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/pandas_value_meets_condition_all_worksheets.py)
 
 所需文件:[sales_2013.xlsx](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/sales_2013.xlsx)
 
