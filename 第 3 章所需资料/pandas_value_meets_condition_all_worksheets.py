@@ -2,7 +2,7 @@ import pandas as pd
 import sys
 input_file = sys.argv[1]
 output_file = sys.argv[2]
-data_frame = pd.read_excel(input_file,sheet_name=None,index_col=None)
+data_frame = pd.read_excel(input_file,sheet_name=None,index_col=None) # 原书中此处是 sheetname 不是 sheet_name
 column_output = []
 for worksheet_name,data in data_frame.items():
 	column_output.append(data.loc[:,['Customer Name','Sale Amount']])
