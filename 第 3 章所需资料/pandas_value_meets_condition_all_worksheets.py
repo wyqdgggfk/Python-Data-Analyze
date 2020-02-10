@@ -2,7 +2,7 @@ import pandas as pd
 import sys
 input_file = sys.argv[1]
 output_file = sys.argv[2]
-data_frame = pd.read_excel(input_file,sheet_name=None,index_col=None)
+data_frame = pd.read_excel(input_file,sheet_name=None,index_col=None) # 原书中是 sheetname,无法运行的,要加下划线
 row_output=[]
 for worksheet_name,data in data_frame.items():
 	row_output.append(data[data['Sale Amount'].astype(float) > 2000.0])
