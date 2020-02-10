@@ -97,11 +97,11 @@ writer.save()
 
 ### 1.基础 Python
 
-文件名称:10excel_column_by_name_all_worksheet.py
+文件名称:[10excel_column_by_name_all_worksheet.py](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/10excel_column_by_name_all_worksheet.py)
 
 所需文件:[sales_2013.xlsx](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/sales_2013.xlsx)
 
-输出文件:10output.xls
+输出文件:[10output.xls](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/10output.xls)
 
 
 
