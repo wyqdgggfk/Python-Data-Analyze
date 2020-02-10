@@ -64,7 +64,7 @@ output_workbook.save(output_file)
 
 ### 2.Pandas 在所有工作表中筛选特定行
 
-此代码将利用 Pan
+此代码将利用 Pandas 选取 Customer Name 和 Sale Amount 这两列.
 
 文件名称:[pandas_value_meets_condition_all_worksheets.py](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/pandas_value_meets_condition_all_worksheets.py)
 
