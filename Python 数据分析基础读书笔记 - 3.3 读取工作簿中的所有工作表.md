@@ -64,7 +64,11 @@ output_workbook.save(output_file)
 
 ### 2.Pandas 在所有工作表中筛选特定行
 
-此代码将利用 Pandas 选取 Customer Name 和 Sale Amount 这两列.
+借用原书中的话进行说明:
+
+> 在 Pandas 中,通过在 read_excel 函数中设置 `sheetname=None`,可以一次性读取工作簿中的所有工作表.Pandas 将这些工作表读入一个数据框字典,字典中的键就是工作表的名称,值就是包含工作表中数据的数据框.
+
+需要声明一下,在写这篇笔记时,已经不再是 `sheetname=None`,而是`sheet_name=None`,多了一个下划线.
 
 文件名称:pandas_value_meets_condition_all_worksheets.py
 
