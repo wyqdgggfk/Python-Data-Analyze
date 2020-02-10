@@ -91,7 +91,7 @@ filtered_rows.to_excel(writer,sheet_name='sale_amount_gt2000',index=False)
 writer.save()
 ```
 
-
+## 3.3.2 在所有工作表中选取特定列
 
 
 
