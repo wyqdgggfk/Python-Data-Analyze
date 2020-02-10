@@ -22,4 +22,4 @@ with open_workbook(input_file) as workbook:
 			row_list = []
 			for column_index in index_of_cols_to_keep:
 				cell_value = worksheet.cell_value(row_index,column_index)
-				cell_type = 
+				cell_type = worksheet.cell_type(row_index,column_index)
