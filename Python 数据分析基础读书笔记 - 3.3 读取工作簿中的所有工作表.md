@@ -93,7 +93,15 @@ writer.save()
 
 ## 3.3.2 在所有工作表中选取特定列
 
+此处的应用场景与 3.3.1 类似,只不过一个是选取特定行,一个是选取特定列.下面的代码将会演示如何在所有工作表中选取 Customer Name 和 Sale Amount 列.
 
+### 1.基础 Python
+
+文件名称:10excel_column_by_name_all_worksheet.py
+
+所需文件:[sales_2013.xlsx](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/sales_2013.xlsx)
+
+输出文件:
 
 
 
