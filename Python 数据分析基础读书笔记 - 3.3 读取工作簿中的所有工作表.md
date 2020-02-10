@@ -12,11 +12,11 @@
 
 在所有工作表中筛选出销售额大于 $2000.0 的所有行.
 
-文件名称:9excel_value_meets_condition_all_worksheets.py
+文件名称:[9excel_value_meets_condition_all_worksheets.py](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/9excel_value_meets_condition_all_worksheets.py)
 
 所需文件:[sales_2013.xlsx](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/sales_2013.xlsx)
 
-输出文件:9output.xls
+输出文件:[9output.xls](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/9output.xls)
 
 ```python
 
