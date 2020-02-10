@@ -144,11 +144,11 @@ output_workbook.save(output_file)
 
 ### 2.Pandas 
 
-文件名称:pandas_column_by_name_all_worksheets.py
+文件名称:[pandas_column_by_name_all_worksheets.py](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/pandas_column_by_name_all_worksheets.py)
 
 所需文件:[sales_2013.xlsx](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/sales_2013.xlsx)
 
-输出文件:10output_pandas.xls
+输出文件:[10output_pandas.xls](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/10output_pandas.xls)
 
 ```python
 import pandas as pd
