@@ -10,9 +10,9 @@
 
 ### 1.基础 Python
 
-文件名称:
+文件名称:11excel_value_meets_condition_set_of_worksheets.py
 
-所需文件:
+所需文件:sales_2013.xlsx
 
 输出文件:
 
