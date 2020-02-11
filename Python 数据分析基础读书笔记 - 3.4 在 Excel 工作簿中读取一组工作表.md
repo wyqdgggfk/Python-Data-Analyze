@@ -63,11 +63,11 @@ output_workbook.save(output_file)
 
 ### 2.Pandas
 
-文件名称:pandas_value_meets_condition_set_of_worksheets.py
+文件名称:[pandas_value_meets_condition_set_of_worksheets.py](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/pandas_value_meets_condition_set_of_worksheets.py)
 
 所需文件:[sales_2013.xlsx](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/sales_2013.xlsx)
 
-输出文件:11pandas_output.xls
+输出文件:[11pandas_output.xls](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/11pandas_output.xls)
 
 
 
