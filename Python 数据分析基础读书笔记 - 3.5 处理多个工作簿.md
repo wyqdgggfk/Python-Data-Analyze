@@ -9,3 +9,5 @@
 书中会用到 [sales_2014.xlsx](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/sales_2014.xlsx) 和 [sales_2015.xlsx](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/sales_2015.xlsx) 这两个 Excel 表格进行讲解,我已经将此表格放到了我的仓库,欢迎 star.
 
 ## 3.5.1 工作表计数以及每个工作表中的行列计数
+
+我知道一个工作簿中有多少工作表,每个工作表有多少行列,有什么作用呢?
