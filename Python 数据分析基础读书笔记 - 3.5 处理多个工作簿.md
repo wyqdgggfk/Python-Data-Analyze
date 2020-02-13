@@ -12,9 +12,9 @@
 
 我知道一个工作簿中有多少工作表,每个工作表有多少行列,有什么作用呢?实际上,当我们拿到一些数据的时候,这些数据可能很大,也可能很多,每个工作表有多少行多少列,都有些什么内容,我们都不一定清楚,如果工作表较少或者文件不是很大,我们可以直接打开来看看,但如果有很多工作表,光是打开它们就很费劲了,所以可以利用 Python 先对这些工作表进行一下集中的处理,知道个大概的数据量.下面就看看怎么操作:
 
-文件名称:12excel_introspect_all_workbooks.py
+文件名称:[12excel_introspect_all_workbooks.py](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/12excel_introspect_all_workbooks.py)
 
-所需文件:
+所需文件:[第 3 章所需文件](https://github.com/wyqdgggfk/Python-Data-Analyze/tree/master/第%203%20章所需资料)
 
 输出文件:None
 
@@ -37,5 +37,9 @@ print('Number of Excel workbooks:%d' %(workbook_counter))
 
 ```
 
+我在跟着书练习这段代码时,遇到了两个错误,提出来仅供参考:
 
+其一是如果在终端直接 cd 到 12excel_introspect_all_workbooks.py 所在的文件夹,然后运行命令`python3 12excel_introspect_all_workbooks.py myFilePath`,那么我只会得到一个输出,就是 `Number of Excel workbooks:0`,但如果我不 cd 到对应文件夹,而是直接在终端下运行 `python3 12excel_introspect_all_workbooks.py myFilePath`,那么我就会得到我想要的输出;
+
+其二是如果我的文件夹中有 .xlsx 文件,那么原书的匹配就会出错,因为在代码的第 7 行,原书的代码是 `for input_file in glob.glob(os.path.join(input_directory, '*.xls*')):`,比我的代码最后多了一个 * 星号,这样会直接匹配到 .xlsx 的文件,但 xlrd 这个库在面对 .xlsx 文件时,你懂的...
 
