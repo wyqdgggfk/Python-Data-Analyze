@@ -43,3 +43,5 @@ print('Number of Excel workbooks:%d' %(workbook_counter))
 
 其二是如果我的文件夹中有 .xlsx 文件,那么原书的匹配就会出错,因为在代码的第 7 行,原书的代码是 `for input_file in glob.glob(os.path.join(input_directory, '*.xls*')):`,比我的代码最后多了一个 * 星号,这样会直接匹配到 .xlsx 的文件,但 xlrd 这个库在面对 .xlsx 文件时,你懂的...
 
+正在看这篇文章的你,不妨试试看,是否会出现我遇到的错误.
+
