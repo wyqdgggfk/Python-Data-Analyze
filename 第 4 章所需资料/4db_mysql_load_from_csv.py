@@ -18,3 +18,17 @@ for row in file_reader:
 		else:
 			a_date = datetime.date(datetime.strftime(str(row[column_index]), '%m/%d/%Y'))
 			# %Y: year is 2015;  %y:year is 15
+			a_date = a_date.strftime('%Y-%m-%d')
+			data.append(a_date)
+	print(data)
+	c.execute("""INSERT INTO Suppliers VALUES (%S,%S,%S,%S,%S);""",data)
+con.commit()
+print("")
+# 查询 Suppliers 表
+c.execute("SELECT * FROM Suppliers")
+rows = c.fetchall()	
+for row in rows:
+	row_list_output = []
+	for column_index in range(len(row)):
+		row_list_output.append(str(row[column_index]))
+	print(row_list_output)
