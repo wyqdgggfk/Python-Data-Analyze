@@ -30,4 +30,7 @@ for input_file in glob.glob(os.path.join(input_folder, '*.xls')): # 原书中此
 					else:
 						row_list.append(cell_value)
 				data.append(row_list)
-for 		
+for list_index,output_list in enumerate(data):
+	for element_index,element in enumerate(output_list):
+		output_worksheet.write(list_index,element_index,element)
+output_workbook.save(output_file)		
