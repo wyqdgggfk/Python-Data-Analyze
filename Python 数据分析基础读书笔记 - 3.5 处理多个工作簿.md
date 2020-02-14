@@ -140,11 +140,11 @@ writer.save()
 
 ### 1.基础 Python
 
-文件名称:14excel_sum_average_multiple_workbook.py
+文件名称:[14excel_sum_average_multiple_workbook.py](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/14excel_sum_average_multiple_workbook.py)
 
-所需文件:
+所需文件:[sales_data](https://github.com/wyqdgggfk/Python-Data-Analyze/tree/master/第%203%20章所需资料/sales_data)
 
-输出文件:14output.xls
+输出文件:[14output.xls](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/14output.xls)
 
 ```python
 
