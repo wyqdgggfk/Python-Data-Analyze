@@ -56,11 +56,11 @@ print('Number of Excel workbooks:%d' %(workbook_counter))
 
 ### 1. 基础 Python
 
-文件名称:
+文件名称:13excel_concat_data_from_multiple_workbook.py
 
-所需文件:
+所需文件:[第 3 章所需文件](https://github.com/wyqdgggfk/Python-Data-Analyze/tree/master/第%203%20章所需资料)
 
-输出文件:
+输出文件:13output.xls
 
 ```python
 
