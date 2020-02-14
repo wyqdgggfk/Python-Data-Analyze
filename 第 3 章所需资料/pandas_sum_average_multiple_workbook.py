@@ -9,7 +9,7 @@ output_file = sys.argv[2]
 all_workbooks = glob.glob(os.path.join(input_path,'*.xls*'))
 data_frames = []
 for workbook in all_workbooks:
-	all_worksheets = pd.read_excel(workbook, sheetname=None, index_col=None)
+	all_worksheets = pd.read_excel(workbook, sheet_name=None, index_col=None)
 	workbook_total_sales = []
 	workbook_number_of_sales = []
 	worksheet_data_frames = []
