@@ -23,3 +23,9 @@ for input_file in glob.glob(os.path.join(input_folder, '*.xls*')):
 			worksheet_list = []
 			worksheet_list.append(os.path.basename(input_file))
 			worksheet_list.append(worksheet.name)
+			for row_index in range(1,worksheet.nrows):
+				try:
+					total_sales += float(str(worksheet.cell_value(row_index,sales_column_index)).strip('$').replace(',',''))
+					number_of_sales += 1
+				except:
+					
