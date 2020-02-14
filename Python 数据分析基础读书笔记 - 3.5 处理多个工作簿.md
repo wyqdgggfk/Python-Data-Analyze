@@ -115,7 +115,7 @@ output_workbook.save(output_file)
 
 所需文件:[sales_data](https://github.com/wyqdgggfk/Python-Data-Analyze/tree/master/第%203%20章所需资料/sales_data)
 
-输出文件:13otuput_pandas.xls
+输出文件:[13otuput_pandas.xls](https://github.com/wyqdgggfk/Python-Data-Analyze/blob/master/第%203%20章所需资料/13otuput_pandas.xls)
 
 ```python
 import pandas as pd
