@@ -107,7 +107,9 @@ output_workbook.save(output_file)
 
 ### 2. Pandas
 
+借用原书的说明:
 
+> pandas 提供了 concat 函数来连接数据框.如果你想把数据框一个一个地垂直堆叠起来,那么就要设置参数 axis=0.如果你想把数据框一个一个地平行连接起来,那么就要设置参数 axis=1.此外,如果你需要基于某个关键字列连接数据框,pandas 中的 merge 函数可以提供类似 SQL join 的操作.
 
 
 
