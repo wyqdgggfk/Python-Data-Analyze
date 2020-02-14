@@ -138,6 +138,18 @@ writer.save()
 
 ## 3.5.3 为每个工作簿和工作表计算总数和均值
 
+### 1.基础 Python
+
+文件名称:14excel_sum_average_multiple_workbook.py
+
+所需文件:
+
+输出文件:
+
+```python
+
+```
+
 
 
 
