@@ -34,6 +34,7 @@ for input_file in glob.glob(os.path.join(input_folder, '*.xls*')):
 			worksheet_list.append(total_sales)
 			worksheet_list.append(float(average_sales))
 			list_of_totals.append(total_sales)
+			list_of_numbers.append(float(number_of_sales))
 			workbook_output.append(worksheet_list)
 		workbook_total = sum(list_of_totals)
 		workbook_average = sum(list_of_totals)/sum(list_of_numbers)
