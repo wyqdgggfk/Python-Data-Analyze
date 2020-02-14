@@ -10,3 +10,11 @@ c = con.cursor()
 # 向 Suppliers 表中插入数据
 file_reader = csv.reader(open(input_file,'r',newline=''))
 header = next(file_reader)
+for row in file_reader:
+	data = []
+	for column_index in range(len(header)):
+		if column_index < 4:
+			data.append(str(row[column_index]).lstrip('$').replace(',','').strip())
+		else:
+			a_date = datetime.date(datetime.strftime(str(row[column_index]), '%m/%d/%Y'))
+			# %Y: year is 2015;  %y:year is 15
