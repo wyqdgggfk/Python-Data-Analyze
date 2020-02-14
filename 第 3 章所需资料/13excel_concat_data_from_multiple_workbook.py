@@ -8,3 +8,5 @@ input_folder = sys.argv[1]
 output_file = sys.argv[2]
 output_workbook = Workbook()
 output_worksheet = output_workbook.add_sheet('all_data_all_workbooks')
+data = []
+first_worksheet = True
